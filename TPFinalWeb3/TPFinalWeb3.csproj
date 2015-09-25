@@ -55,15 +55,27 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="fonts\font-awesome\css\font-awesome.css" />
+    <Content Include="fonts\font-awesome\css\font-awesome.min.css" />
+    <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Styles\bootstrap-theme.min.css" />
-    <Content Include="Styles\bootstrap.min.css" />
-    <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\inspinia.js" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\jquery.slimscroll.min.js" />
+    <Content Include="Scripts\metisMenu.min.js" />
+    <Content Include="Scripts\pace.min.js" />
+    <Content Include="Styles\animate.css" />
+    <Content Include="Styles\bootstrap-theme.min.css" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\font-awesome.min.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Styles\style.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -133,6 +145,42 @@
   <ItemGroup>
     <Content Include="Account\Web.config" />
     <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fonts\font-awesome\fonts\fontawesome-webfont.eot" />
+    <None Include="fonts\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <None Include="fonts\font-awesome\fonts\fontawesome-webfont.woff" />
+    <None Include="fonts\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <None Include="fonts\font-awesome\fonts\FontAwesome.otf" />
+    <None Include="fonts\font-awesome\less\animated.less" />
+    <None Include="fonts\font-awesome\less\bordered-pulled.less" />
+    <None Include="fonts\font-awesome\less\core.less" />
+    <None Include="fonts\font-awesome\less\fixed-width.less" />
+    <None Include="fonts\font-awesome\less\font-awesome.less" />
+    <None Include="fonts\font-awesome\less\icons.less" />
+    <None Include="fonts\font-awesome\less\larger.less" />
+    <None Include="fonts\font-awesome\less\list.less" />
+    <None Include="fonts\font-awesome\less\mixins.less" />
+    <None Include="fonts\font-awesome\less\path.less" />
+    <None Include="fonts\font-awesome\less\rotated-flipped.less" />
+    <None Include="fonts\font-awesome\less\stacked.less" />
+    <None Include="fonts\font-awesome\less\variables.less" />
+    <None Include="fonts\font-awesome\scss\font-awesome.scss" />
+    <None Include="fonts\font-awesome\scss\_animated.scss" />
+    <None Include="fonts\font-awesome\scss\_bordered-pulled.scss" />
+    <None Include="fonts\font-awesome\scss\_core.scss" />
+    <None Include="fonts\font-awesome\scss\_fixed-width.scss" />
+    <None Include="fonts\font-awesome\scss\_icons.scss" />
+    <None Include="fonts\font-awesome\scss\_larger.scss" />
+    <None Include="fonts\font-awesome\scss\_list.scss" />
+    <None Include="fonts\font-awesome\scss\_mixins.scss" />
+    <None Include="fonts\font-awesome\scss\_path.scss" />
+    <None Include="fonts\font-awesome\scss\_rotated-flipped.scss" />
+    <None Include="fonts\font-awesome\scss\_stacked.scss" />
+    <None Include="fonts\font-awesome\scss\_variables.scss" />
+    <None Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
