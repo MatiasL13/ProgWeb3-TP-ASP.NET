@@ -58,6 +58,7 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Historial.aspx" />
     <Content Include="UserIndex.aspx" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Default.aspx" />
@@ -140,6 +141,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Historial.aspx.cs">
+      <DependentUpon>Historial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Historial.aspx.designer.cs">
+      <DependentUpon>Historial.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserIndex.aspx.cs">
       <DependentUpon>UserIndex.aspx</DependentUpon>

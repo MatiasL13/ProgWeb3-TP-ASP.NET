@@ -24,69 +24,83 @@
     <form runat="server">
     <div id="wrapper">
         <nav class="navbar-default navbar-static-side" role="navigation">
-    <div class="sidebar-collapse">
-        <ul class="nav" id="side-menu">
-            <li class="nav-header">
-                <div class="dropdown profile-element">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                        <span class="clear">
-                            <span class="block m-t-xs">
-                                <strong class="font-bold">Example user</strong>
-                            </span> <span class="text-muted text-xs block">Example menu <b class="caret"></b></span>
-                        </span>
-                    </a>
-                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                        <li><a href="#">Logout</a></li>
-                    </ul>
-                </div>
-                <div class="logo-element">
+                <div class="sidebar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="nav-header">
+                            <div class="dropdown profile-element">
+
+                                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                                <AnonymousTemplate>
+                                   <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Iniciar sesión</a>
+                               </AnonymousTemplate>
+                               <LoggedInTemplate>
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                    <span class="clear">
+                                        <span class="block m-t-xs">
+                                            <strong class="font-bold"><asp:LoginName ID="HeadLoginName" runat="server" /></strong>
+                                        </span> <span class="text-muted text-xs block">Menu<b class="caret"></b></span>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                 <li><asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Cerrar sesión" LogoutPageUrl="~/"/></li> 
+                             </ul>
+                         </div>
+                     </LoggedInTemplate>
+                 </asp:LoginView>
+                 <div class="logo-element">
                     IN+
                 </div>
             </li>   
             <asp:ContentPlaceHolder ID="NavContent" runat="server" />
-           <!--  <li class="">
-                <a href="/Default.aspx"><i class="fa fa-laptop"></i> <span class="nav-label">Main page</span> </a>
-            </li>
-            <li class="">
-                <a href=""><i class="fa fa-desktop"></i> <span class="nav-label">Minor page</span></a>
-            </li> -->
+
         </ul>
     </div>
 </nav>
         <div id="page-wrapper" class="gray-bg">
             <div class="row border-bottom">
                 <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
-        <div class="navbar-header">
-            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-        </div>
-        <div class="title">
-                <h1>
-                   Maratones
-                </h1>
-        </div>
-            <div class="loginDisplay">
-                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
-                    <AnonymousTemplate>
-                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Iniciar sesión</a> ]
-                    </AnonymousTemplate>
-                    <LoggedInTemplate>
-                        Pantalla de bienvenida <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
-                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Cerrar sesión" LogoutPageUrl="~/"/> ]
-                    </LoggedInTemplate>
-                </asp:LoginView>
-            </div>           
-    </nav>
+            <div class="navbar-header">
+                <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
             </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <asp:LoginView ID="LoginView1" runat="server" EnableViewState="false">
+                 <LoggedInTemplate>
+                <li>
+                    <a href="#">
+                       <strong class="font-bold">Maratonista </strong >
+                       </a>
+                   </li>
+                   <li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                           <strong class="font-bold"><asp:LoginName ID="HeadLoginName" runat="server" /></strong>
+                       </a>
+                   </li>
+                   <li>
+                    <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Cerrar sesión" LogoutPageUrl="~/"/>
+                </li>
+            </LoggedInTemplate>
+             <AnonymousTemplate>
+                <li>
+                  <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Iniciar sesión</a>
+                </li>
+            </AnonymousTemplate>
+        </asp:LoginView>
+    </ul>
+            </div>
+            </nav>
             <div class="main">
                 <asp:ContentPlaceHolder ID="MainContent" runat="server" />
             </div>
             <div class="clear">
             </div>
-        <div class="footer">
-          <p>Universidad Nacional de La Matanza -Dpto. de Ingeniería e Investigaciones Tecnológicas.
-            ­ Tecnicatura en Desarrollo Web ­ Programación Web III </p>   
-            <p> Integrantes: Guido Pardo - Leonardo Parga - Matias Leonel Sanchez</p>
-        </div>
+            <div class="footer">
+                <p>
+                    Universidad Nacional de La Matanza -Dpto. de Ingeniería e Investigaciones Tecnológicas.
+                    ­ Tecnicatura en Desarrollo Web ­ Programación Web III
+                </p>
+                <p>
+                    Integrantes: Guido Pardo - Leonardo Parga - Matias Leonel Sanchez</p>
+            </div>
         </div>
     </div>
     </form>

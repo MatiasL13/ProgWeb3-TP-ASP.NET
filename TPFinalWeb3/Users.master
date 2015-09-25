@@ -3,10 +3,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="NavContent" runat="server">
             <li class="">
-                <a href="/Default.aspx"><i class="fa fa-laptop"></i> <span class="nav-label">Main page</span> </a>
+                <a href="/UsersIndex.aspx"><i class="fa fa-laptop"></i> <span class="nav-label">Main page</span> </a>
             </li>
             <li class="">
-                <a href=""><i class="fa fa-clock-o"></i> <span class="nav-label">Historial de maratones realizados</span></a>
+                <a href="/Historial.aspx"><i class="fa fa-clock-o"></i> <span class="nav-label">Historial de maratones realizados</span></a>
             </li> 
             <li class="">
                 <a href=""><i class="fa fa-road"></i> <span class="nav-label">Registración a nuevo maratón</span></a>

@@ -22,6 +22,15 @@ namespace TPFinalWeb3 {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
         
         /// <summary>
+        /// Control HeadLoginView.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LoginView HeadLoginView;
+        
+        /// <summary>
         /// Control NavContent.
         /// </summary>
         /// <remarks>
@@ -31,13 +40,13 @@ namespace TPFinalWeb3 {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder NavContent;
         
         /// <summary>
-        /// Control HeadLoginView.
+        /// Control LoginView1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LoginView HeadLoginView;
+        protected global::System.Web.UI.WebControls.LoginView LoginView1;
         
         /// <summary>
         /// Control MainContent.

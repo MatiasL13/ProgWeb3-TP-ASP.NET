@@ -11,7 +11,12 @@ namespace TPFinalWeb3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            bool val1 = (System.Web.HttpContext.Current.User != null) && System.Web.HttpContext.Current.User.Identity.IsAuthenticated;
+            if (!val1)
+            {
+                HttpContext.Current.Response.Redirect("Default.aspx", true);
 
+            }
         }
     }
 }
