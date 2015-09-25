@@ -50,17 +50,17 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
+    <Content Include="Modules\AdminIndex.aspx" />
+    <Content Include="Modules\About.aspx" />
     <Content Include="Account\ChangePassword.aspx" />
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
-    <Content Include="fonts\font-awesome\css\font-awesome.css" />
-    <Content Include="fonts\font-awesome\css\font-awesome.min.css" />
-    <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Modules\UserIndex.aspx" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Default.aspx" />
+    <Content Include="Modules\Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\inspinia.js" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
@@ -85,11 +85,18 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="About.aspx.cs">
+    <Compile Include="Modules\AdminIndex.aspx.cs">
+      <DependentUpon>AdminIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\AdminIndex.aspx.designer.cs">
+      <DependentUpon>AdminIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="About.aspx.designer.cs">
+    <Compile Include="Modules\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\ChangePassword.aspx.cs">
@@ -120,12 +127,26 @@
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
+    <Compile Include="Admins.master.cs">
+      <DependentUpon>Admins.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins.master.designer.cs">
+      <DependentUpon>Admins.master</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
+    <Compile Include="Modules\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\UserIndex.aspx.cs">
+      <DependentUpon>UserIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\UserIndex.aspx.designer.cs">
+      <DependentUpon>UserIndex.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -138,6 +159,13 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="Users.master.cs">
+      <DependentUpon>Users.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users.master.designer.cs">
+      <DependentUpon>Users.master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -147,40 +175,16 @@
     <Content Include="Site.Master" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="fonts\font-awesome\fonts\fontawesome-webfont.eot" />
-    <None Include="fonts\font-awesome\fonts\fontawesome-webfont.ttf" />
-    <None Include="fonts\font-awesome\fonts\fontawesome-webfont.woff" />
-    <None Include="fonts\font-awesome\fonts\fontawesome-webfont.woff2" />
-    <None Include="fonts\font-awesome\fonts\FontAwesome.otf" />
-    <None Include="fonts\font-awesome\less\animated.less" />
-    <None Include="fonts\font-awesome\less\bordered-pulled.less" />
-    <None Include="fonts\font-awesome\less\core.less" />
-    <None Include="fonts\font-awesome\less\fixed-width.less" />
-    <None Include="fonts\font-awesome\less\font-awesome.less" />
-    <None Include="fonts\font-awesome\less\icons.less" />
-    <None Include="fonts\font-awesome\less\larger.less" />
-    <None Include="fonts\font-awesome\less\list.less" />
-    <None Include="fonts\font-awesome\less\mixins.less" />
-    <None Include="fonts\font-awesome\less\path.less" />
-    <None Include="fonts\font-awesome\less\rotated-flipped.less" />
-    <None Include="fonts\font-awesome\less\stacked.less" />
-    <None Include="fonts\font-awesome\less\variables.less" />
-    <None Include="fonts\font-awesome\scss\font-awesome.scss" />
-    <None Include="fonts\font-awesome\scss\_animated.scss" />
-    <None Include="fonts\font-awesome\scss\_bordered-pulled.scss" />
-    <None Include="fonts\font-awesome\scss\_core.scss" />
-    <None Include="fonts\font-awesome\scss\_fixed-width.scss" />
-    <None Include="fonts\font-awesome\scss\_icons.scss" />
-    <None Include="fonts\font-awesome\scss\_larger.scss" />
-    <None Include="fonts\font-awesome\scss\_list.scss" />
-    <None Include="fonts\font-awesome\scss\_mixins.scss" />
-    <None Include="fonts\font-awesome\scss\_path.scss" />
-    <None Include="fonts\font-awesome\scss\_rotated-flipped.scss" />
-    <None Include="fonts\font-awesome\scss\_stacked.scss" />
-    <None Include="fonts\font-awesome\scss\_variables.scss" />
+    <Content Include="Admins.master" />
+    <None Include="fonts\fontawesome-webfont.eot" />
+    <None Include="fonts\fontawesome-webfont.ttf" />
+    <None Include="fonts\fontawesome-webfont.woff" />
+    <None Include="fonts\fontawesome-webfont.woff2" />
+    <None Include="fonts\FontAwesome.otf" />
     <None Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="fonts\glyphicons-halflings-regular.ttf" />
     <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Users.master" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
