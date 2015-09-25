@@ -16,7 +16,7 @@
           
                    </div>
             <div class="textCenter margin20TopBottom">
-              <a href="Account/Login.aspx" class="btn btn-success">¡Empieze a Administrar sus maratones!</a>
+              <a href="Account/Register.aspx" class="btn btn-success">¡Empieze a Administrar sus maratones!</a>
             </div>
           
         </div>
