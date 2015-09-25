@@ -58,7 +58,11 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="DatosDeUsuario.aspx" />
     <Content Include="Historial.aspx" />
+    <Content Include="Scripts\datapicker\bootstrap-datepicker.js" />
+    <Content Include="Scripts\datapicker\locales\bootstrap-datepicker.es.js" />
+    <Content Include="Scripts\DatosDeUsuario.js" />
     <Content Include="UserIndex.aspx" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Default.aspx" />
@@ -141,6 +145,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosDeUsuario.aspx.cs">
+      <DependentUpon>DatosDeUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosDeUsuario.aspx.designer.cs">
+      <DependentUpon>DatosDeUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Historial.aspx.cs">
       <DependentUpon>Historial.aspx</DependentUpon>
