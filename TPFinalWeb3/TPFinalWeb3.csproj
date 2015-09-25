@@ -50,17 +50,17 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Modules\AdminIndex.aspx" />
-    <Content Include="Modules\About.aspx" />
+    <Content Include="AdminIndex.aspx" />
+    <Content Include="About.aspx" />
     <Content Include="Account\ChangePassword.aspx" />
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Modules\UserIndex.aspx" />
+    <Content Include="UserIndex.aspx" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Modules\Default.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\inspinia.js" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
@@ -85,18 +85,18 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Modules\AdminIndex.aspx.cs">
+    <Compile Include="AdminIndex.aspx.cs">
       <DependentUpon>AdminIndex.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Modules\AdminIndex.aspx.designer.cs">
+    <Compile Include="AdminIndex.aspx.designer.cs">
       <DependentUpon>AdminIndex.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Modules\About.aspx.cs">
+    <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Modules\About.aspx.designer.cs">
+    <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\ChangePassword.aspx.cs">
@@ -134,18 +134,18 @@
     <Compile Include="Admins.master.designer.cs">
       <DependentUpon>Admins.master</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Default.aspx.cs">
+    <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Modules\Default.aspx.designer.cs">
+    <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Modules\UserIndex.aspx.cs">
+    <Compile Include="UserIndex.aspx.cs">
       <DependentUpon>UserIndex.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Modules\UserIndex.aspx.designer.cs">
+    <Compile Include="UserIndex.aspx.designer.cs">
       <DependentUpon>UserIndex.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
@@ -169,6 +169,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Modules\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />

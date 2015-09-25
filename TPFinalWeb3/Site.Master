@@ -63,7 +63,7 @@
                 <h1>
                    Maratones
                 </h1>
-            </div>
+        </div>
             <div class="loginDisplay">
                 <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
                     <AnonymousTemplate>
@@ -82,8 +82,11 @@
             </div>
             <div class="clear">
             </div>
-        </div>
         <div class="footer">
+          <p>Universidad Nacional de La Matanza -Dpto. de Ingeniería e Investigaciones Tecnológicas.
+            ­ Tecnicatura en Desarrollo Web ­ Programación Web III </p>   
+            <p> Integrantes: Guido Pardo - Leonardo Parga - Matias Leonel Sanchez</p>
+        </div>
         </div>
     </div>
     </form>
