@@ -7482,3 +7482,28 @@ body.skin-3 {
     display: none;
   }
 }
+.loginBody
+{
+    margin: 0 !important;
+}
+
+/* defauklt*/
+.box
+{
+    width:50%;
+    padding-bottom: 35px;
+    margin:0 auto;
+}
+.boxLogin
+{
+    margin-top: 10%;
+}
+.textCenter
+{
+    text-align: center;
+}
+.margin20TopBottom
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

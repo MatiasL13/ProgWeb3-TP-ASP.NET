@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Iniciar sesión" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
+﻿<%@ Page Title="Iniciar sesión" Language="C#" MasterPageFile="~/Anonymous.master" AutoEventWireup="true"
     CodeBehind="Login.aspx.cs" Inherits="TPFinalWeb3.Account.Login" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
