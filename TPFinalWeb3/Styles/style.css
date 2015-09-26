@@ -7507,3 +7507,15 @@ body.skin-3 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.imageBackground1
+{
+     background-image:url('/Imagenes/maraton.jpg');
+ background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: auto;
+  max-height: 2000px;
+  min-height: 720px;
+  color: #fff;
+  margin-top: -1px;
+}

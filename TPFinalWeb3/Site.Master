@@ -11,12 +11,12 @@
     <link href="~/Styles/style.css" rel="stylesheet" type="text/css" />
     <link href="~/Styles/animate.css" rel="stylesheet" type="text/css" />
     <link href="Styles/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="~/Scripts/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/metisMenu.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/pace.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/jquery.slimscroll.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/inspinia.js"></script>
+ <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/jquery-2.1.1.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/bootstrap.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/metisMenu.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/pace.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/jquery.slimscroll.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/inspinia.js")%>"></script>
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>
