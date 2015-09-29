@@ -1,1 +1,6 @@
-﻿
+﻿.separador00 {
+    float:none;
+    clear:both;
+    width:100%;
+    height:80px;
+}
