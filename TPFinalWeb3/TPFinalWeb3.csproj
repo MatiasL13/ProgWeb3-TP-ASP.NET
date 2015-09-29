@@ -34,6 +34,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -42,6 +43,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
@@ -73,6 +75,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="DatosDeUsuario.aspx" />
     <Content Include="RegistrarMaraton.aspx" />
+    <Content Include="RegistrarResultadoMaraton.aspx" />
     <Content Include="Historial.aspx" />
     <Content Include="Imagenes\maraton.jpg" />
     <Content Include="Scripts\datapicker\bootstrap-datepicker.es.js" />
@@ -180,6 +183,13 @@
     </Compile>
     <Compile Include="RegistrarMaraton.aspx.designer.cs">
       <DependentUpon>RegistrarMaraton.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarResultadoMaraton.aspx.cs">
+      <DependentUpon>RegistrarResultadoMaraton.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarResultadoMaraton.aspx.designer.cs">
+      <DependentUpon>RegistrarResultadoMaraton.aspx</DependentUpon>
     </Compile>
     <Compile Include="Historial.aspx.cs">
       <DependentUpon>Historial.aspx</DependentUpon>

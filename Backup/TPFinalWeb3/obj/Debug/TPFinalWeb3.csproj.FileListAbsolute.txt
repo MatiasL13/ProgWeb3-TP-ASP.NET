@@ -1,0 +1,4 @@
+C:\Sites\ProgWeb3-TP-ASP.NET\Backup\TPFinalWeb3\bin\TPFinalWeb3.dll
+C:\Sites\ProgWeb3-TP-ASP.NET\Backup\TPFinalWeb3\bin\TPFinalWeb3.pdb
+C:\Sites\ProgWeb3-TP-ASP.NET\Backup\TPFinalWeb3\obj\Debug\TPFinalWeb3.dll
+C:\Sites\ProgWeb3-TP-ASP.NET\Backup\TPFinalWeb3\obj\Debug\TPFinalWeb3.pdb

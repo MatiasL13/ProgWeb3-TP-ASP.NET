@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Users.master.cs" Inherits="TPFinalWeb3.Users" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+<script type="text/javascript" src="Scripts/datapicker/bootstrap-datepicker.js"></script>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="NavContent" runat="server">
+            <li class="">
+                <a href="/UserIndex.aspx"><i class="fa fa-laptop"></i> <span class="nav-label">Main page</span> </a>
+            </li>
+            <li class="">
+                <a href="/Historial.aspx"><i class="fa fa-clock-o"></i> <span class="nav-label">Historial de maratones realizados</span></a>
+            </li> 
+            <li class="">
+                <a href="/RegistrarMaraton.aspx"><i class="fa fa-road"></i> <span class="nav-label">Registración a nuevo maratón</span></a>
+            </li> 
+            <li class="">
+                <a href="/DatosDeUsuario.aspx"><i class="fa fa-user"></i> <span class="nav-label">Administración de datos de usuario</span></a>
+            </li> 
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+ <asp:ContentPlaceHolder ID="UserMainContent" runat="server" />
+</asp:Content>
