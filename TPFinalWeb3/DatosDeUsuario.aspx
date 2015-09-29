@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Users.master" AutoEventWireup="true"
-    CodeBehind="DatosDeUsuario.aspx.cs" Inherits="TPFinalWeb3.Formulario_web13" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Users.master" AutoEventWireup="true"   CodeBehind="DatosDeUsuario.aspx.cs" Inherits="TPFinalWeb3.Formulario_web13" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="UserMainContent" runat="server">
 <legend>Modificar Datos Personales</legend>

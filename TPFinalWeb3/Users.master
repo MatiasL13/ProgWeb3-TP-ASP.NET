@@ -10,7 +10,7 @@
                 <a href="/Historial.aspx"><i class="fa fa-clock-o"></i> <span class="nav-label">Historial de maratones realizados</span></a>
             </li> 
             <li class="">
-                <a href=""><i class="fa fa-road"></i> <span class="nav-label">Registración a nuevo maratón</span></a>
+                <a href="/RegistrarMaraton.aspx"><i class="fa fa-road"></i> <span class="nav-label">Registración a nuevo maratón</span></a>
             </li> 
             <li class="">
                 <a href="/DatosDeUsuario.aspx"><i class="fa fa-user"></i> <span class="nav-label">Administración de datos de usuario</span></a>

@@ -3,9 +3,9 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="AdminMainContent" runat="server">
  <h2>
-       AMDINSSSSSSS
+       Bienvenido <asp:LoginName ID="HeadLoginName" runat="server" />
     </h2>
-    <p>
-        Coloque contenido aquí.
-    </p>
+    <h3>
+        Informacion destacada 
+    </h3>
 </asp:Content>

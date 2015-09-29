@@ -3,7 +3,7 @@
 
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="UserMainContent">
     <h2>
-       USUARIOO
+        Bienvenido <asp:LoginName ID="HeadLoginName" runat="server" />
     </h2>
     <p>
         Coloque contenido aquí.
