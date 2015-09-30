@@ -2,7 +2,11 @@
     CodeBehind="DatosDeUsuario.aspx.cs" Inherits="TPFinalWeb3.Formulario_web13" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="UserMainContent" runat="server">
-    <legend>Modificar Datos Personales</legend>
+    <legend>Modificar Datos Personales</legend><span class="failureNotification">
+        <asp:Literal ID="FailureText" runat="server"></asp:Literal>
+    </span>
+    <asp:ValidationSummary ID="LoginUserValidationSummary" runat="server" CssClass="failureNotification"
+        ValidationGroup="UserValidationGroup" />
     <div class='ibox float-e-margins'>
         <div class="ibox-content">
             <div class="form-group">

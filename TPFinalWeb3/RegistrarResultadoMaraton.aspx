@@ -29,6 +29,11 @@
                  <asp:ListItem Value= "true">Finalizo</asp:ListItem>
                 </asp:DropDownList>
             </div>
+             <div class="submitButton">
+                <asp:Button ID="btnRegistrarResultados" runat="server" class="btn btn-success" CommandName="MoveNext"
+                    Text="Registrar Resultados Datos" ValidationGroup="ResultadosValidationGroup" />
+            </div>
         </div>
+         <div class="separador00"></div>
     </div>
 </asp:Content>
