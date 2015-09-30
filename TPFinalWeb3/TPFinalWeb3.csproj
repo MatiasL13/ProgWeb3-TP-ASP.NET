@@ -74,6 +74,7 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="DatosDeUsuario.aspx" />
+    <Content Include="AdminLogin.aspx" />
     <Content Include="RegistrarMaraton.aspx" />
     <Content Include="RegistrarResultadoMaraton.aspx" />
     <Content Include="Historial.aspx" />
@@ -178,6 +179,13 @@
     </Compile>
     <Compile Include="DatosDeUsuario.aspx.designer.cs">
       <DependentUpon>DatosDeUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegistrarMaraton.aspx.cs">
       <DependentUpon>RegistrarMaraton.aspx</DependentUpon>

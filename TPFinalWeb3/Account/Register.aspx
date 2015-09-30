@@ -140,6 +140,10 @@
                                             *
                                         </asp:CompareValidator>
                                     </div>
+                                   <%-- <div>
+                                     <asp:Label ID="Label1" runat="server" AssociatedControlID="UserLastname">Administrador</asp:Label>
+                                        <asp:CheckBox ID="chkAdmin" runat="server" />
+                                    </div>--%>
                                     <div class="submitButton">
                                         <asp:Button ID="CreateUserButton" runat="server" class="btn btn-success" CommandName="MoveNext"
                                             Text="Crear usuario" ValidationGroup="RegisterUserValidationGroup" />
