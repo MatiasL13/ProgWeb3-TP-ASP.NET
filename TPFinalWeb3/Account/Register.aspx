@@ -12,9 +12,7 @@
         <WizardSteps>
             <asp:CreateUserWizardStep ID="RegisterUserWizardStep" runat="server">
                 <ContentTemplate>
-                    <h2>
-                        Crear una nueva cuenta
-                    </h2>
+                    <h2>Crear una nueva cuenta</h2>
                     <p>
                         Use el formulario siguiente para crear una cuenta nueva.
                     </p>
@@ -34,18 +32,51 @@
                             <div class='ibox float-e-margins'>
                                 <div class="ibox-content box">
                                     <div class="form-group">
-                                        <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">Nombre de usuario:</asp:Label>
+                                        <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">Nombre :</asp:Label>
                                         <asp:TextBox ID="UserName" runat="server" CssClass="textEntry form-control"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName"
-                                            CssClass="failureNotification" ErrorMessage="El nombre de usuario es obligatorio."
-                                            ToolTip="El nombre de usuario es obligatorio." ValidationGroup="RegisterUserValidationGroup">*</asp:RequiredFieldValidator>
+                                            CssClass="failureNotification" ErrorMessage="El nombre de es obligatorio."
+                                            ToolTip="El nombre es obligatorio." ValidationGroup="RegisterUserValidationGroup">*</asp:RequiredFieldValidator>
                                     </div>
                                     <div class="form-group">
-                                        <asp:Label ID="EmailLabel" runat="server" AssociatedControlID="Email">Correo electrónico:</asp:Label>
+                                        <asp:Label ID="UserLastnameLabel" runat="server" AssociatedControlID="UserLastname">Apellido :</asp:Label>
+                                        <asp:TextBox ID="UserLastname" runat="server" CssClass="textEntry form-control"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="UserLastnameValidator" runat="server" ControlToValidate="UserLastname"
+                                            CssClass="failureNotification" ErrorMessage="El apellido es obligatorio."
+                                            ToolTip="El apellido es obligatorio." ValidationGroup="RegisterUserValidationGroup">*</asp:RequiredFieldValidator>
+                                    </div>
+                                    <div class="form-group">
+                                         <script type="text/javascript">
+                                            function validateEmail(sender, args) {
+                                                if (args.Value == "") {
+                                                    args.IsValid = false;
+                                                }
+                                                else {
+                                                    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                                                    if (!filter.test(args.Value)) {
+                                                        args.IsValid = false;
+                                                    }
+                                                }
+                                            }
+                                        </script>
+                                        <asp:Label ID="EmailLabel" runat="server" AssociatedControlID="Email">Correo electr&oacute;nico:</asp:Label>
                                         <asp:TextBox ID="Email" runat="server" CssClass="textEntry form-control"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="EmailRequired" runat="server" ControlToValidate="Email"
                                             CssClass="failureNotification " ErrorMessage="El correo electrónico es obligatorio."
                                             ToolTip="El correo electrónico es obligatorio." ValidationGroup="RegisterUserValidationGroup">*</asp:RequiredFieldValidator>
+                                        <asp:RegularExpressionValidator ID="EmailRegularExpressionValidator" runat="server" ControlToValidate="Email" ErrorMessage="Ingrese un correo v&aacute;lido" 
+                                        ValidationExpression="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"></asp:RegularExpressionValidator>
+                                    </div>
+                                    <div class="form-group">
+                                        <asp:Label ID="FechaNacLabel" runat="server" AssociatedControlID="txtFechaNac">Fecha de Nacimiento:</asp:Label>
+                                        <asp:TextBox ID="txtFechaNac" class="form-control datepicker" runat="server"></asp:TextBox>
+                                    </div>
+                                    <div class="form-group">
+                                        <asp:Label ID="LugarRecidenciaLabel" runat="server" AssociatedControlID="LugarRecidencia">Lugar de Residencia:</asp:Label>
+                                        <asp:TextBox ID="LugarRecidencia" runat="server" CssClass="textEntry form-control"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="LugarRecidenciaRequired" runat="server" ControlToValidate="LugarRecidencia"
+                                            CssClass="failureNotification " ErrorMessage="El lugar de residencia es obligatorio."
+                                            ToolTip="El lugar de residencia es obligatorio." ValidationGroup="RegisterUserValidationGroup">*</asp:RequiredFieldValidator>
                                     </div>
                                     <div class="form-group">
                                         <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Contraseña:</asp:Label>
@@ -79,4 +110,5 @@
             </asp:CreateUserWizardStep>
         </WizardSteps>
     </asp:CreateUserWizard>
+    <script type="text/javascript" src="Scripts/registro.js"></script>
 </asp:Content>

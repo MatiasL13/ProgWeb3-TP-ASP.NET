@@ -17,16 +17,17 @@
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/pace.min.js")%>"></script>
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/jquery.slimscroll.min.js")%>"></script>
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/inspinia.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/datapicker/bootstrap-datepicker.es.js")%>"></script>
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="Form1" runat="server">
-    <div id="wrapper">
-      
-        <div id="page-wrapper" class="gray-bg loginBody">
-            <div class="row border-bottom">
-                <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+        <div id="wrapper">
+
+            <div id="page-wrapper" class="gray-bg loginBody">
+                <div class="row border-bottom">
+                    <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
            <ul class="nav navbar-top-links navbar-left">
            <li><a href="/Default.aspx">Inicio</a></li>
            </ul>
@@ -54,23 +55,24 @@
             </AnonymousTemplate>
         </asp:LoginView>
     </ul>
-            </div>
-            </nav>
+                </div>
+                </nav>
             <div class="main">
                 <asp:ContentPlaceHolder ID="MainContent" runat="server" />
             </div>
-            <div class="clear">
-            </div>
-            <div class="footer">
-                <p>
-                    Universidad Nacional de La Matanza -Dpto. de Ingeniería e Investigaciones Tecnológicas.
+                <div class="clear">
+                </div>
+                <div class="footer">
+                    <p>
+                        Universidad Nacional de La Matanza -Dpto. de Ingeniería e Investigaciones Tecnológicas.
                     ­ Tecnicatura en Desarrollo Web ­ Programación Web III
-                </p>
-                <p>
-                    Integrantes: Guido Pardo - Leandro Parga - Matias Leonel Sanchez</p>
+                    </p>
+                    <p>
+                        Integrantes: Guido Pardo - Leandro Parga - Matias Leonel Sanchez
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
     </form>
 </body>
 </html>
