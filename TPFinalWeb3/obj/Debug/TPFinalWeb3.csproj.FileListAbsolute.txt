@@ -1,7 +1,3 @@
-C:\Users\Ziero-N03\documents\visual studio 2010\Projects\TPFinalWeb3\TPFinalWeb3\bin\TPFinalWeb3.dll
-C:\Users\Ziero-N03\documents\visual studio 2010\Projects\TPFinalWeb3\TPFinalWeb3\bin\TPFinalWeb3.pdb
-C:\Users\Ziero-N03\documents\visual studio 2010\Projects\TPFinalWeb3\TPFinalWeb3\obj\Debug\TPFinalWeb3.dll
-C:\Users\Ziero-N03\documents\visual studio 2010\Projects\TPFinalWeb3\TPFinalWeb3\obj\Debug\TPFinalWeb3.pdb
 C:\Users\Nano\Documents\Visual Studio 2015\Projects\TPPW3\TPFinalWeb3\bin\TPFinalWeb3.dll.config
 C:\Users\Nano\Documents\Visual Studio 2015\Projects\TPPW3\TPFinalWeb3\bin\TPFinalWeb3.dll
 C:\Users\Nano\Documents\Visual Studio 2015\Projects\TPPW3\TPFinalWeb3\bin\TPFinalWeb3.pdb

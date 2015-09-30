@@ -1,6 +1,5 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Users.master.cs" Inherits="TPFinalWeb3.Users" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-<script type="text/javascript" src="Scripts/datapicker/bootstrap-datepicker.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="NavContent" runat="server">
             <li class="">
@@ -14,6 +13,9 @@
             </li> 
             <li class="">
                 <a href="/DatosDeUsuario.aspx"><i class="fa fa-user"></i> <span class="nav-label">Administración de datos de usuario</span></a>
+            </li> 
+               <li class="">
+                <a href="/AdminIndex.aspx"><i class="fa fa-user"></i> <span class="nav-label">Login Administrador</span></a>
             </li> 
 </asp:Content>
 

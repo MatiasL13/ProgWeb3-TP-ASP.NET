@@ -13,7 +13,7 @@
         si no tiene una cuenta.
     </p>
     <asp:Login ID="LoginUser" runat="server" EnableViewState="false" RenderOuterTable="false"
-        DestinationPageUrl="~/AdminIndex.aspx">
+        DestinationPageUrl="~/Default.aspx">
         <LayoutTemplate>
             <span class="failureNotification">
                 <asp:Literal ID="FailureText" runat="server"></asp:Literal>
