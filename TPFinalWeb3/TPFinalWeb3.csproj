@@ -80,6 +80,7 @@
     <Content Include="Imagenes\maraton.jpg" />
     <Content Include="Scripts\datapicker\bootstrap-datepicker.es.js" />
     <Content Include="Scripts\DatosDeUsuario.js" />
+    <Content Include="Scripts\registro.js" />
     <Content Include="UserIndex.aspx" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Default.aspx" />
