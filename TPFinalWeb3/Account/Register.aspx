@@ -2,7 +2,7 @@
     CodeBehind="Register.aspx.cs" Inherits="TPFinalWeb3.Account.Register" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
-    <script type="text/javascript" src="../Scripts/datapicker/bootstrap-datepicker.es.js"></script>
+    <script type="text/javascript" src="../Scripts/datapicker/bootstrap-datepicker.js"></script>
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <asp:CreateUserWizard ID="RegisterUser" runat="server" EnableViewState="false" OnCreatedUser="RegisterUser_CreatedUser">
@@ -52,17 +52,15 @@
                                         <asp:RequiredFieldValidator ID="EmailRequired" runat="server" ControlToValidate="Email"
                                             CssClass="failureNotification " ErrorMessage="El correo electrónico es obligatorio."
                                             ToolTip="El correo electrónico es obligatorio." ValidationGroup="RegisterUserValidationGroup">*</asp:RequiredFieldValidator>
-<<<<<<< HEAD
                                         <asp:CustomValidator id="CustomValidatorEmail" runat="server"
                                             ControlToValidate = "Email"
                                             CssClass="failureNotification " 
                                           ErrorMessage = "Debe ingresar un correo válido"
-                                          ClientValidationFunction="validarEmail" >
+                                          ClientValidationFunction="validarEmail" 
+                                          ValidationGroup="RegisterUserValidationGroup">
                                         </asp:CustomValidator>
-=======
                                         <asp:RegularExpressionValidator ID="EmailRegularExpressionValidator" runat="server" ControlToValidate="Email" ErrorMessage="Ingrese un correo v&aacute;lido" 
                                         ValidationExpression="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$" ValidationGroup="RegisterUserValidationGroup">*</asp:RegularExpressionValidator>
->>>>>>> cae55278d42b0f632dd24e120018e95a61fc18b4
                                     </div>
                                     <div class="form-group">
                                         <asp:Label ID="FechaNacLabel" runat="server" AssociatedControlID="txtFechaNac">Fecha de Nacimiento:</asp:Label>
@@ -107,9 +105,6 @@
             </asp:CreateUserWizardStep>
         </WizardSteps>
     </asp:CreateUserWizard>
-<<<<<<< HEAD
     <script type="text/javascript" src="../Scripts/registro.js"></script>
-=======
-    <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/registro.js")%>"></script>
->>>>>>> cae55278d42b0f632dd24e120018e95a61fc18b4
+<%--    <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/registro.js")%>"></script>--%>
 </asp:Content>
