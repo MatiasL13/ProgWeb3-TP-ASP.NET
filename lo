@@ -1,0 +1,145 @@
+[33mcommit 00cee3caf5a9259ad2da666912b7838f550680e3[m
+Author: Guido Pardo <guidopardo@gmail.com>
+Date:   Wed Sep 30 00:28:15 2015 -0300
+
+    Se corrigieron los ids del form de registro, queda ver las funciones js
+
+[33mcommit 45045af0e0f70f78821f867102aedea732f62bbe[m
+Author: Guido Pardo <guidopardo@gmail.com>
+Date:   Wed Sep 30 00:00:39 2015 -0300
+
+    mas avances sobre la validación del registro, falta hacer las validaciones del lado del cliente y poner bien los nombres de los ids
+
+[33mcommit 1f600438f000327f0cfd380aededa59c200914ec[m
+Merge: 8417984 cae5527
+Author: Guido Pardo <guidopardo@gmail.com>
+Date:   Tue Sep 29 23:45:03 2015 -0300
+
+    realicé un pull para tomar lo del datepicker que corrigio matias
+
+[33mcommit 841798472dd3926f0d859c4d56691f895c6366f6[m
+Author: Guido Pardo <guidopardo@gmail.com>
+Date:   Tue Sep 29 23:42:39 2015 -0300
+
+    Sigo trabajando sobre el registro
+
+[33mcommit cae55278d42b0f632dd24e120018e95a61fc18b4[m
+Author: Matias Sanchez <matias.l.sanchez@gmail.com>
+Date:   Tue Sep 29 23:30:46 2015 -0300
+
+    faltaba validation group para validar el mail, se agrega el datapicker q borre sin qrer
+
+[33mcommit b248f67cc07985b3a85a27f8133e89f4810ec600[m
+Merge: 803cc8f cb5ef29
+Author: Matias Sanchez <matias.l.sanchez@gmail.com>
+Date:   Tue Sep 29 23:19:10 2015 -0300
+
+    merge
+
+[33mcommit 803cc8f5d389ef163a9853b18fd580c9a42f47e6[m
+Author: Matias Sanchez <matias.l.sanchez@gmail.com>
+Date:   Tue Sep 29 23:15:52 2015 -0300
+
+    arreglos menores
+
+[33mcommit cb5ef29e36946fc45f836ca02dcc504f776799bb[m
+Author: Guido Pardo <guidopardo@gmail.com>
+Date:   Tue Sep 29 21:07:02 2015 -0300
+
+    Se agregaron campos al registro de usuario. Falta formato y validación de fecha de nacimiento y validar el formato del mail
+
+[33mcommit 8df02953b70b6c122a2f34b63f7fa60c53bef79d[m
+Author: Guido Pardo <guidopardo@gmail.com>
+Date:   Tue Sep 29 19:02:19 2015 -0300
+
+    Tabla con resultados de la ultima maratón
+
+[33mcommit b6e9641779b9e1da4680cb57053a6d1a72d2d91a[m
+Author: matiasl13 <matias.l.sanchez@gmail.com>
+Date:   Tue Sep 29 15:54:20 2015 -0300
+
+    estilos en todas las paginas de account
+
+[33mcommit 2f3b3f70bf4bde9b5e0572c55bf02ebda9e16e84[m
+Author: matiasl13 <matias.l.sanchez@gmail.com>
+Date:   Tue Sep 29 14:32:28 2015 -0300
+
+    se agrega modulo de registrar a maraton
+
+[33mcommit 47787667ce13cf33a43e9586766302875dec4240[m
+Author: pargaleandro <pargaleandro@gmail.com>
+Date:   Tue Sep 29 08:44:53 2015 -0300
+
+    historial maratones, crear maraton, registrar maraton
+
+[33mcommit f20cbabab1c7619749319dfd8fda1c04f50c1d57[m
+Author: Matias Sanchez <matias.l.sanchez@gmail.com>
+Date:   Mon Sep 28 14:57:39 2015 -0300
+
+    :P
+
+[33mcommit 94191b259cc9f1ee001d2d37514fa06ce05ea6b4[m
+Author: Matias Sanchez <matias.l.sanchez@gmail.com>
+Date:   Fri Sep 25 22:00:25 2015 -0300
+
+    script con direcciones relativas
+
+[33mcommit b1daeaffae0c9bb1a485064a0c15c62ee6b71ff9[m
+Author: Matias Sanchez <matias.l.sanchez@gmail.com>
+Date:   Fri Sep 25 20:46:21 2015 -0300
+
+    camios
+
+[33mcommit 52df6e7cca169ddb5917c0c418753b52ed293d39[m
+Author: Matias Sanchez <matias.l.sanchez@gmail.com>
+Date:   Fri Sep 25 20:27:13 2015 -0300
+
+    pagina maestra para sesiones no iniciadas
+
+[33mcommit 36a069e4c10e7863440e078d7d6e67871f171b1c[m
+Author: Matias Sanchez <matias.l.sanchez@gmail.com>
+Date:   Fri Sep 25 19:23:32 2015 -0300
+
+    se agrega otra pagina
+
+[33mcommit c8804b0df558574bff588be528ea5c92f2a0c0f3[m
+Author: Matias Sanchez <matias.l.sanchez@gmail.com>
+Date:   Fri Sep 25 16:49:29 2015 -0300
+
+    save
+
+[33mcommit 69e865c9a7685127ae3d6b1d16faf263cce82aea[m
+Author: Matias Sanchez <matias.l.sanchez@gmail.com>
+Date:   Fri Sep 25 15:45:39 2015 -0300
+
+    valida si esta el usuario logeuado
+
+[33mcommit 52acd6abb031ffbf99b8b9e0badc626fa5609981[m
+Author: Matias Sanchez <matias.l.sanchez@gmail.com>
+Date:   Fri Sep 25 14:15:11 2015 -0300
+
+    orden d e archivos y footer
+
+[33mcommit d1d741c9dbf4845fdfca162cbf65a5fb82ba0464[m
+Author: Matias Sanchez <matias.l.sanchez@gmail.com>
+Date:   Fri Sep 25 13:16:35 2015 -0300
+
+    agregado paginas maestras anidadas de site.master (admin y users )
+
+[33mcommit c81c7376f5338c7a372d541538861d26e44a9fdd[m
+Author: Matias Sanchez <matias.l.sanchez@gmail.com>
+Date:   Fri Sep 25 12:43:02 2015 -0300
+
+    template
+
+[33mcommit 3bc634077272149f2e5e02812b000630c2472748[m
+Author: Matias Sanchez <matias.l.sanchez@gmail.com>
+Date:   Fri Sep 25 10:17:33 2015 -0300
+
+    boostrap agregado
+
+[33mcommit da9a9cb2b6afcfb80b69bbf5a91763ab67a18933[m
+Author: Matias Sanchez <matias.l.sanchez@gmail.com>
+Date:   Fri Sep 25 10:08:43 2015 -0300
+
+    subida de archivos
