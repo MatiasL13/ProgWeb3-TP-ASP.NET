@@ -2,6 +2,7 @@
     CodeBehind="Register.aspx.cs" Inherits="TPFinalWeb3.Account.Register" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
+    <script type="text/javascript" src="../Scripts/datapicker/bootstrap-datepicker.es.js"></script>
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <asp:CreateUserWizard ID="RegisterUser" runat="server" EnableViewState="false" OnCreatedUser="RegisterUser_CreatedUser">
@@ -46,26 +47,17 @@
                                             ToolTip="El apellido es obligatorio." ValidationGroup="RegisterUserValidationGroup">*</asp:RequiredFieldValidator>
                                     </div>
                                     <div class="form-group">
-                                         <script type="text/javascript">
-                                            function validateEmail(sender, args) {
-                                                if (args.Value == "") {
-                                                    args.IsValid = false;
-                                                }
-                                                else {
-                                                    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-                                                    if (!filter.test(args.Value)) {
-                                                        args.IsValid = false;
-                                                    }
-                                                }
-                                            }
-                                        </script>
                                         <asp:Label ID="EmailLabel" runat="server" AssociatedControlID="Email">Correo electr&oacute;nico:</asp:Label>
                                         <asp:TextBox ID="Email" runat="server" CssClass="textEntry form-control"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="EmailRequired" runat="server" ControlToValidate="Email"
                                             CssClass="failureNotification " ErrorMessage="El correo electrónico es obligatorio."
                                             ToolTip="El correo electrónico es obligatorio." ValidationGroup="RegisterUserValidationGroup">*</asp:RequiredFieldValidator>
-                                        <asp:RegularExpressionValidator ID="EmailRegularExpressionValidator" runat="server" ControlToValidate="Email" ErrorMessage="Ingrese un correo v&aacute;lido" 
-                                        ValidationExpression="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"></asp:RegularExpressionValidator>
+                                        <asp:CustomValidator id="CustomValidatorEmail" runat="server"
+                                            ControlToValidate = "Email"
+                                            CssClass="failureNotification " 
+                                          ErrorMessage = "Debe ingresar un correo válido"
+                                          ClientValidationFunction="validarEmail" >
+                                        </asp:CustomValidator>
                                     </div>
                                     <div class="form-group">
                                         <asp:Label ID="FechaNacLabel" runat="server" AssociatedControlID="txtFechaNac">Fecha de Nacimiento:</asp:Label>
@@ -110,5 +102,5 @@
             </asp:CreateUserWizardStep>
         </WizardSteps>
     </asp:CreateUserWizard>
-    <script type="text/javascript" src="Scripts/registro.js"></script>
+    <script type="text/javascript" src="../Scripts/registro.js"></script>
 </asp:Content>
