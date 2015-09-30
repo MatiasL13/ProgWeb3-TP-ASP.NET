@@ -65,7 +65,7 @@
                                             CssClass="failureNotification " ErrorMessage="El correo electrónico es obligatorio."
                                             ToolTip="El correo electrónico es obligatorio." ValidationGroup="RegisterUserValidationGroup">*</asp:RequiredFieldValidator>
                                         <asp:RegularExpressionValidator ID="EmailRegularExpressionValidator" runat="server" ControlToValidate="Email" ErrorMessage="Ingrese un correo v&aacute;lido" 
-                                        ValidationExpression="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"></asp:RegularExpressionValidator>
+                                        ValidationExpression="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$" ValidationGroup="RegisterUserValidationGroup">*</asp:RegularExpressionValidator>
                                     </div>
                                     <div class="form-group">
                                         <asp:Label ID="FechaNacLabel" runat="server" AssociatedControlID="txtFechaNac">Fecha de Nacimiento:</asp:Label>
@@ -110,5 +110,5 @@
             </asp:CreateUserWizardStep>
         </WizardSteps>
     </asp:CreateUserWizard>
-    <script type="text/javascript" src="Scripts/registro.js"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/registro.js")%>"></script>
 </asp:Content>
