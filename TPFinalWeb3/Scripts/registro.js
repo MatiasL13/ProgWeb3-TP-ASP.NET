@@ -9,7 +9,7 @@
 function campoRequerido(oSrc, args) {
     var valido = true;
     if (args.Value == '' || args.Value.length == 0) {
-        valido == false;
+        valido = false;
     }
 
     args.IsValid = valido;
@@ -19,7 +19,7 @@ function passCompare(oSrc, args) {
     var valido = true;
     var pass = document.getElementById('<%=Password.ClientID%>').value;
     if (args.Value != pass) {
-        valido == false;
+        valido = false;
     }
 
     args.IsValid = valido;
@@ -40,11 +40,3 @@ function validarEmail(oSrc, args) {
         
 }
 
-$(document).ready(function () {
-    $('.datepicker').datepicker({
-        format: "dd/mm/yyyy",
-        todayBtn: "linked",
-        clearBtn: true,
-        language: "es"
-    });
-});
