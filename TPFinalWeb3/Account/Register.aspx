@@ -131,7 +131,7 @@
                                             *
                                         </asp:RequiredFieldValidator>
                                         <asp:CompareValidator ID="comparePassword" runat="server" 
-                                            ControlToCompare="pswPassword"
+                                            ControlToCompare="Password"
                                             ControlToValidate="ConfirmPassword" 
                                             CssClass="failureNotification" 
                                             Display="Dynamic"
