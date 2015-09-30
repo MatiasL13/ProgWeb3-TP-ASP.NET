@@ -20,6 +20,8 @@ namespace TPFinalWeb3.Account
         {
             FormsAuthentication.SetAuthCookie(RegisterUser.UserName, false /* createPersistentCookie */);
 
+            //Roles.AddUserToRole(RegisterUser.UserName, "user");
+
             string continueUrl = RegisterUser.ContinueDestinationPageUrl;
             if (String.IsNullOrEmpty(continueUrl))
             {
@@ -27,7 +29,7 @@ namespace TPFinalWeb3.Account
             }
             Response.Redirect(continueUrl);
         }
-
-
     }
+
 }
+

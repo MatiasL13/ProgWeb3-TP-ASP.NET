@@ -11,7 +11,7 @@
     <link href="~/Styles/style.css" rel="stylesheet" type="text/css" />
     <link href="~/Styles/animate.css" rel="stylesheet" type="text/css" />
     <link href="Styles/font-awesome.min.css" rel="stylesheet" type="text/css" />
- <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/jquery-2.1.1.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/jquery-2.1.1.min.js")%>"></script>
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/bootstrap.min.js")%>"></script>
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/metisMenu.min.js")%>"></script>
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/pace.min.js")%>"></script>
@@ -66,9 +66,18 @@
             <div class="navbar-header">
                 <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
             </div>
+                  
+                   <ul class="nav navbar-top-links navbar-left">
+                        <li>
+                        <asp:ContentPlaceHolder ID="TitleNavContent" runat="server"/> 
+                        </li>
+                     </ul>
+
             <ul class="nav navbar-top-links navbar-right">
                 <asp:LoginView ID="LoginView1" runat="server" EnableViewState="false">
                  <LoggedInTemplate>
+            
+              
                 <li>
                     <a href="#">
                        <strong class="font-bold">Maratonista </strong >

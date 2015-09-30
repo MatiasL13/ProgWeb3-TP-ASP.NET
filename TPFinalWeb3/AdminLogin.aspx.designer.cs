@@ -10,123 +10,105 @@
 namespace TPFinalWeb3 {
     
     
-    public partial class Formulario_web13 {
+    public partial class AdminLogin {
         
         /// <summary>
-        /// Control lblNombre.
+        /// Control FailureText.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombre;
+        protected global::System.Web.UI.WebControls.Literal FailureText;
         
         /// <summary>
-        /// Control txtNombre.
+        /// Control LoginUserValidationSummary.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombre;
+        protected global::System.Web.UI.WebControls.ValidationSummary LoginUserValidationSummary;
         
         /// <summary>
-        /// Control txtNombreRequired.
+        /// Control UserNameLabel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator txtNombreRequired;
+        protected global::System.Web.UI.WebControls.Label UserNameLabel;
         
         /// <summary>
-        /// Control lblApellido.
+        /// Control UserName.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblApellido;
+        protected global::System.Web.UI.WebControls.TextBox UserName;
         
         /// <summary>
-        /// Control txtApellido.
+        /// Control UserNameRequired.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtApellido;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator UserNameRequired;
         
         /// <summary>
-        /// Control requiredtxtApellido.
+        /// Control PasswordLabel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredtxtApellido;
+        protected global::System.Web.UI.WebControls.Label PasswordLabel;
         
         /// <summary>
-        /// Control lblFechaNacimiento.
+        /// Control Password.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFechaNacimiento;
+        protected global::System.Web.UI.WebControls.TextBox Password;
         
         /// <summary>
-        /// Control txtFechaNacimiento.
+        /// Control PasswordRequired.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFechaNacimiento;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator PasswordRequired;
         
         /// <summary>
-        /// Control RequiredFechaNac.
+        /// Control RememberMe.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFechaNac;
+        protected global::System.Web.UI.WebControls.CheckBox RememberMe;
         
         /// <summary>
-        /// Control lblResidencia.
+        /// Control RememberMeLabel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblResidencia;
+        protected global::System.Web.UI.WebControls.Label RememberMeLabel;
         
         /// <summary>
-        /// Control txtResidencia.
+        /// Control LoginButton.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtResidencia;
-        
-        /// <summary>
-        /// Control requiredLugarRecidencia.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredLugarRecidencia;
-        
-        /// <summary>
-        /// Control btnEditarUser.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEditarUser;
+        protected global::System.Web.UI.WebControls.Button LoginButton;
     }
 }

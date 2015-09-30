@@ -15,7 +15,7 @@
                 <a href="/DatosDeUsuario.aspx"><i class="fa fa-user"></i> <span class="nav-label">Administración de datos de usuario</span></a>
             </li> 
                <li class="">
-                <a href="/AdminIndex.aspx"><i class="fa fa-user"></i> <span class="nav-label">Login Administrador</span></a>
+                <a href="/AdminLogin.aspx"><i class="fa fa-user"></i> <span class="nav-label">Login Administrador</span></a>
             </li> 
 </asp:Content>
 
