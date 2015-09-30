@@ -12,36 +12,83 @@
             <div class="form-group">
                 <asp:Label ID="lblNombre" runat="server" Text="Nombre"></asp:Label>
                 <asp:TextBox ID="txtNombre" class="form-control" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="txtNombreRequired" runat="server" ControlToValidate="txtNombre"
-                    CssClass="failureNotification" ErrorMessage="El nombre de usuario es obligatorio."
-                    ToolTip="El nombre de usuario es obligatorio." ValidationGroup="UserValidationGroup">*</asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="txtNombreRequired" runat="server" 
+                    ControlToValidate="txtNombre"
+                    CssClass="failureNotification" 
+                    ErrorMessage="El nombre de usuario es obligatorio."
+                    ToolTip="El nombre de usuario es obligatorio." 
+                    ValidationGroup="UserValidationGroup">
+                    *
+                </asp:RequiredFieldValidator>
+                <asp:CustomValidator id="customTxtNameRequired" runat="server"
+                    ControlToValidate = "txtNombre"
+                    CssClass="failureNotification"
+                    ErrorMessage = "El nombre de usuario es obligatorio."
+                    ClientValidationFunction = "campoRequerido"
+                    ValidationGroup="UserValidationGroup">
+                    *
+                </asp:CustomValidator>
+
             </div>
             <div class="form-group">
                 <asp:Label ID="lblApellido" runat="server" Text="Apellido"></asp:Label>
                 <asp:TextBox ID="txtApellido" class="form-control" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="requiredtxtApellido" runat="server" ControlToValidate="txtApellido"
-                    CssClass="failureNotification" ErrorMessage="El apellido es obligatorio." ToolTip="El apellido es obligatorio."
+                <asp:RequiredFieldValidator ID="requiredtxtApellido" runat="server" 
+                    ControlToValidate="txtApellido"
+                    CssClass="failureNotification" 
+                    ErrorMessage="El apellido es obligatorio." 
+                    ToolTip="El apellido es obligatorio."
                     ValidationGroup="UserValidationGroup">
-                                            *
+                    *
                 </asp:RequiredFieldValidator>
+                <asp:CustomValidator id="CustomtxtApellidoRequired" runat="server"
+                    ControlToValidate = "txtApellido"
+                    CssClass="failureNotification"
+                    ErrorMessage = "El apellido es obligatorio."
+                    ClientValidationFunction = "campoRequerido"
+                    ValidationGroup="UserValidationGroup">
+                    *
+                </asp:CustomValidator>
             </div>
             <div class="form-group">
                 <asp:Label ID="lblFechaNacimiento" runat="server" Text="Fecha de Nacimiento"></asp:Label>
                 <asp:TextBox ID="txtFechaNacimiento" class="form-control datepicker" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFechaNac" runat="server" ControlToValidate="txtFechaNacimiento"
-                    CssClass="failureNotification" ErrorMessage="La fecha de nacimiento es obligatoria."
-                    ToolTip="La fecha de nacimiento es obligatoria." ValidationGroup="UserValidationGroup">
-                                            *
+                <asp:RequiredFieldValidator ID="RequiredFechaNac" runat="server" 
+                    ControlToValidate="txtFechaNacimiento"
+                    CssClass="failureNotification" 
+                    ErrorMessage="La fecha de nacimiento es obligatoria."
+                    ToolTip="La fecha de nacimiento es obligatoria." 
+                    ValidationGroup="UserValidationGroup">
+                    *
                 </asp:RequiredFieldValidator>
+                <asp:CustomValidator id="CustomFechaNacimientoRequired" runat="server"
+                    ControlToValidate = "txtFechaNacimiento"
+                    CssClass="failureNotification"
+                    ErrorMessage = "La fecha de nacimiento es obligatoria."
+                    ClientValidationFunction = "campoRequerido"
+                    ValidationGroup="UserValidationGroup">
+                    *
+                </asp:CustomValidator>
             </div>
             <div class="form-group">
                 <asp:Label ID="lblResidencia" runat="server" Text="Residencia"></asp:Label>
                 <asp:TextBox ID="txtResidencia" class="form-control" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="requiredLugarRecidencia" runat="server" ControlToValidate="txtResidencia"
-                    CssClass="failureNotification " ErrorMessage="El lugar de residencia es obligatorio."
-                    ToolTip="El lugar de residencia es obligatorio." ValidationGroup="UserValidationGroup">
-                                            *
+                <asp:RequiredFieldValidator ID="requiredLugarRecidencia" runat="server" 
+                    ControlToValidate="txtResidencia"
+                    CssClass="failureNotification " 
+                    ErrorMessage="El lugar de residencia es obligatorio."
+                    ToolTip="El lugar de residencia es obligatorio." 
+                    ValidationGroup="UserValidationGroup">
+                    *
                 </asp:RequiredFieldValidator>
+                <asp:CustomValidator id="CustomLugarRecidenciaRequired" runat="server"
+                    ControlToValidate = "txtResidencia"
+                    CssClass="failureNotification"
+                    ErrorMessage = "El lugar de residencia es obligatorio."
+                    ClientValidationFunction = "campoRequerido"
+                    ValidationGroup="UserValidationGroup">
+                    *
+                </asp:CustomValidator>
             </div>
             <div class="submitButton">
                 <asp:Button ID="btnEditarUser" runat="server" class="btn btn-success" CommandName="MoveNext"
