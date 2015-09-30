@@ -78,7 +78,8 @@
     <Content Include="RegistrarResultadoMaraton.aspx" />
     <Content Include="Historial.aspx" />
     <Content Include="Imagenes\maraton.jpg" />
-    <Content Include="Scripts\datapicker\bootstrap-datepicker.es.js" />
+    <Content Include="Scripts\datapicker\bootstrap-datepicker.js" />
+    <Content Include="Scripts\datapicker\locales\bootstrap-datepicker.es.js" />
     <Content Include="Scripts\DatosDeUsuario.js" />
     <Content Include="UserIndex.aspx" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -234,7 +235,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Modules\" />
-    <Folder Include="Scripts\datapicker\locales\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />

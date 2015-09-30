@@ -18,10 +18,8 @@
             <div class="textCenter margin20TopBottom">
                 <a href="Account/Register.aspx" class="btn btn-success">¡Empieze a Administrar sus maratones!</a>
             </div>
-
-        </div>
-    </div>
-    <div class="row">
+                </div>
+              <div class="row">
         <h2 class="text-center">Resultados Buenos Aires Corre 2015</h2>
         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
@@ -101,5 +99,8 @@
         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
     </div>
     <div class="separador00"></div>
+    
+    </div>
+
 
 </asp:Content>

@@ -22,5 +22,5 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="Scripts/DatosDeUsuario.js"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/DatosDeUsuario.js")%>"></script>
 </asp:Content>

@@ -5,7 +5,5 @@
     <h2>
         Bienvenido <asp:LoginName ID="HeadLoginName" runat="server" />
     </h2>
-    <p>
-        Coloque contenido aquí.
-    </p>
+  
 </asp:Content>
