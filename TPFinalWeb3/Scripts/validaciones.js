@@ -6,6 +6,14 @@
     args.IsValid = valido;
 }
 
+function shouldBeNumber() {
+    var valido = true;
+    if (isNaN(args.Value)) {
+        valido = false;
+    }
+    args.IsValid = valido;
+}
+
 function campoRequerido(oSrc, args) {
     var valido = true;
     if (args.Value == '' || args.Value.length == 0) {
