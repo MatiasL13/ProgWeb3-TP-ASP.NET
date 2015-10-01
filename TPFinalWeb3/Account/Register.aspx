@@ -48,6 +48,7 @@
                                             CssClass="failureNotification"
                                             ErrorMessage = "El nombre de es obligatorio."
                                             ClientValidationFunction = "campoRequerido"
+                                            ValidateEmptyText =true
                                             ValidationGroup="RegisterUserValidationGroup">
                                             *
                                         </asp:CustomValidator>
@@ -68,6 +69,7 @@
                                             CssClass="failureNotification"
                                             ErrorMessage = "El apellido es obligatorio."
                                             ClientValidationFunction = "campoRequerido"
+                                            ValidateEmptyText =true
                                             ValidationGroup="RegisterUserValidationGroup">
                                             *
                                         </asp:CustomValidator>
@@ -88,6 +90,7 @@
                                             CssClass="failureNotification"
                                             ErrorMessage = "El correo electrónico es obligatorio."
                                             ClientValidationFunction = "campoRequerido"
+                                            ValidateEmptyText =true
                                             ValidationGroup="RegisterUserValidationGroup">
                                             *
                                         </asp:CustomValidator>
@@ -123,6 +126,7 @@
                                             CssClass="failureNotification"
                                             ErrorMessage = "La fecha de nacimiento es obligatoria."
                                             ClientValidationFunction = "campoRequerido"
+                                            ValidateEmptyText =true
                                             ValidationGroup="RegisterUserValidationGroup">
                                             *
                                         </asp:CustomValidator>
@@ -143,6 +147,7 @@
                                             CssClass="failureNotification"
                                             ErrorMessage = "El lugar de residencia es obligatorio."
                                             ClientValidationFunction = "campoRequerido"
+                                            ValidateEmptyText =true
                                             ValidationGroup="RegisterUserValidationGroup">
                                             *
                                         </asp:CustomValidator>
@@ -184,6 +189,7 @@
                                             CssClass="failureNotification"
                                             ErrorMessage = "Confirmar contraseña es obligatorio."
                                             ClientValidationFunction = "campoRequerido"
+                                            ValidateEmptyText =true
                                             ValidationGroup="RegisterUserValidationGroup">
                                             *
                                         </asp:CustomValidator>

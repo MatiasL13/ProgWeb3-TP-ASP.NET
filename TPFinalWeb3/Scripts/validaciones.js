@@ -45,5 +45,13 @@ function validarEmail(oSrc, args) {
     //    valido =  true;
     //}
     args.IsValid = expr.test(args.Value);
-        
+
+}
+
+function premioEntre5000500(oSrc, args) {
+
+    if (args.Value <= 5000 && args.Value >= 500)
+        args.IsValid = true;
+    else
+        args.IsValid = false;
 }

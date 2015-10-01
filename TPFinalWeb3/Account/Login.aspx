@@ -40,6 +40,7 @@
                                     CssClass="failureNotification"
                                     ErrorMessage = "El nombre de usuario es obligatorio."
                                     ClientValidationFunction = "campoRequerido"
+                                    ValidateEmptyText =true
                                     ValidationGroup="LoginUserValidationGroup">
                                     *
                                 </asp:CustomValidator>

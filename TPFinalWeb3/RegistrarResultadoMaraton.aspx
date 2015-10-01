@@ -39,6 +39,7 @@
                     CssClass="failureNotification"
                     ErrorMessage = "La posici&oacute;n es obligatoria."
                     ClientValidationFunction = "campoRequerido"
+                    ValidateEmptyText =true
                     ValidationGroup="ResultadosValidationGroup">
                     *
                 </asp:CustomValidator>
@@ -73,6 +74,7 @@
                     CssClass="failureNotification"
                     ErrorMessage = "El tiempo es obligatorio."
                     ClientValidationFunction = "campoRequerido"
+                    ValidateEmptyText =true
                     ValidationGroup="ResultadosValidationGroup">
                     *
                 </asp:CustomValidator>
