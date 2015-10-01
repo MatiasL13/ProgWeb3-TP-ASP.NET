@@ -1,3 +1,4 @@
+﻿<<<<<<< HEAD
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admins.master" AutoEventWireup="true"
     CodeBehind="CrearMaraton.aspx.cs" Inherits="TPFinalWeb3.Formulario_web15" %>
 
@@ -103,6 +104,7 @@
                     Type="Double"></asp:RangeValidator>
             </div>
             <div class="submitButton">
+
                 <asp:Button ID="btnCrearMaraton" runat="server" class="btn btn-success" CommandName="MoveNext"
                     Text="Crear Maraton" ValidationGroup="CrearMaratonValidationGroup" />
             </div>
