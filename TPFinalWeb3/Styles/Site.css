@@ -4,3 +4,9 @@
     width:100%;
     height:80px;
 }
+
+.backGround{
+    background-image:url("/Imagenes/wall.jpg");
+    color: #ffffff !important;
+    font-weight:700;
+}

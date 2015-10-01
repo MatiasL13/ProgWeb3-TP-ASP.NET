@@ -6,7 +6,7 @@
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
 
     <div>
-        <div class="boxLogin ibox-content">
+        <div class="boxLogin ibox-content backGround">
             <div class="field textCenter">
                 <h2>Bienvenido al sistema Maratones</h2>
 
