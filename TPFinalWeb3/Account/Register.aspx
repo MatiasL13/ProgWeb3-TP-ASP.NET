@@ -2,7 +2,7 @@
     CodeBehind="Register.aspx.cs" Inherits="TPFinalWeb3.Account.Register" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
-    <script type="text/javascript" src="../Scripts/datapicker/bootstrap-datepicker.js"></script>
+    
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <asp:CreateUserWizard ID="RegisterUser" runat="server" EnableViewState="false" OnCreatedUser="RegisterUser_CreatedUser">
@@ -219,6 +219,6 @@
             </asp:CreateUserWizardStep>
         </WizardSteps>
     </asp:CreateUserWizard>
-    <script type="text/javascript" src="../Scripts/registro.js"></script>
-<%--    <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/registro.js")%>"></script>--%>
+    <%--<script type="text/javascript" src="../Scripts/registro.js"></script>--%>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/registro.js")%>"></script>
 </asp:Content>

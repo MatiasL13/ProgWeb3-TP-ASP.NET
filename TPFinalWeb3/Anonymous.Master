@@ -18,6 +18,7 @@
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/jquery.slimscroll.min.js")%>"></script>
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/inspinia.js")%>"></script>
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/datapicker/bootstrap-datepicker.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/validaciones.js")%>"></script>
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>

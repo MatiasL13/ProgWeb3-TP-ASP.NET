@@ -18,13 +18,14 @@
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/jquery.slimscroll.min.js")%>"></script>
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/inspinia.js")%>"></script>
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/datapicker/bootstrap-datepicker.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/validaciones.js")%>"></script>
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form runat="server">
-    <div id="wrapper">
-        <nav class="navbar-default navbar-static-side" role="navigation">
+        <div id="wrapper">
+            <nav class="navbar-default navbar-static-side" role="navigation">
                 <div class="sidebar-collapse">
                     <ul class="nav" id="side-menu">
                         <li class="nav-header">
@@ -60,9 +61,9 @@
     </div>
 
 </nav>
-        <div id="page-wrapper" class="gray-bg">
-            <div class="row border-bottom">
-                <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+            <div id="page-wrapper" class="gray-bg">
+                <div class="row border-bottom">
+                    <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
             </div>
@@ -99,23 +100,24 @@
             </AnonymousTemplate>
         </asp:LoginView>
     </ul>
-            </div>
-            </nav>
+                </div>
+                </nav>
             <div class="main">
                 <asp:ContentPlaceHolder ID="MainContent" runat="server" />
             </div>
-            <div class="clear">
-            </div>
-            <div class="footer">
-                <p>
-                    Universidad Nacional de La Matanza -Dpto. de Ingeniería e Investigaciones Tecnológicas.
+                <div class="clear">
+                </div>
+                <div class="footer">
+                    <p>
+                        Universidad Nacional de La Matanza -Dpto. de Ingeniería e Investigaciones Tecnológicas.
                     ­ Tecnicatura en Desarrollo Web ­ Programación Web III
-                </p>
-                <p>
-                    Integrantes: Guido Pardo - Leandro Parga - Matias Leonel Sanchez</p>
+                    </p>
+                    <p>
+                        Integrantes: Guido Pardo - Leandro Parga - Matias Leonel Sanchez
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
     </form>
 </body>
 </html>
