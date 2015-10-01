@@ -75,6 +75,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="DatosDeUsuario.aspx" />
     <Content Include="AdminLogin.aspx" />
+    <Content Include="Imagenes\wall.jpg" />
     <Content Include="RegistrarMaraton.aspx" />
     <Content Include="RegistrarResultadoMaraton.aspx" />
     <Content Include="Historial.aspx" />
