@@ -6,6 +6,7 @@
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
 
     <div>
+    <div class="row">
         <div class="boxLogin ibox-content">
             <div class="field textCenter">
                 <h2>Bienvenido al sistema Maratones</h2>
@@ -19,10 +20,12 @@
                 <a href="Account/Register.aspx" class="btn btn-success">¡Empieze a Administrar sus maratones!</a>
             </div>
                 </div>
-              <div class="row">
-        <h2 class="text-center">Resultados Buenos Aires Corre 2015</h2>
+              
+              
+        
         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <h2 class="text-center whiteTrans ">Resultados Buenos Aires Corre 2015</h2>
             <table class="table table-responsive table-hover table-bordered table-striped">
                 <thead>
                     <tr>
