@@ -6,7 +6,7 @@
     args.IsValid = valido;
 }
 
-function shouldBeNumber() {
+function shouldBeNumber(oSrc, args) {
     var valido = true;
     if (isNaN(args.Value)) {
         valido = false;

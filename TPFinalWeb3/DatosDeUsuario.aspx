@@ -23,7 +23,7 @@
                 <asp:CustomValidator id="customTxtNameRequired" runat="server"
                     ControlToValidate = "txtNombre"
                     CssClass="failureNotification"
-                    ErrorMessage = "El nombre de usuario es obligatorio."
+                    
                     ClientValidationFunction = "campoRequerido"
                     ValidateEmptyText =true
                     ValidationGroup="UserValidationGroup">
@@ -45,7 +45,7 @@
                 <asp:CustomValidator id="CustomtxtApellidoRequired" runat="server"
                     ControlToValidate = "txtApellido"
                     CssClass="failureNotification"
-                    ErrorMessage = "El apellido es obligatorio."
+                    
                     ClientValidationFunction = "campoRequerido"
                     ValidateEmptyText =true
                     ValidationGroup="UserValidationGroup">
@@ -66,7 +66,7 @@
                 <asp:CustomValidator id="CustomFechaNacimientoRequired" runat="server"
                     ControlToValidate = "txtFechaNacimiento"
                     CssClass="failureNotification"
-                    ErrorMessage = "La fecha de nacimiento es obligatoria."
+                    
                     ClientValidationFunction = "campoRequerido"
                     ValidateEmptyText =true
                     ValidationGroup="UserValidationGroup">
@@ -87,7 +87,7 @@
                 <asp:CustomValidator id="CustomLugarRecidenciaRequired" runat="server"
                     ControlToValidate = "txtResidencia"
                     CssClass="failureNotification"
-                    ErrorMessage = "El lugar de residencia es obligatorio."
+                    
                     ClientValidationFunction = "campoRequerido"
                     ValidateEmptyText =true
                     ValidationGroup="UserValidationGroup">

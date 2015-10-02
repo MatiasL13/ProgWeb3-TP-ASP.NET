@@ -5,8 +5,25 @@
     height:80px;
 }
 
-.backGround{
-    background-image:url("/Imagenes/wall.jpg");
-    color: #ffffff !important;
-    font-weight:700;
+.backGround
+{
+     background-image:url("/Imagenes/wall.jpg");
+ background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: auto;
+  max-height: 2000px;
+  min-height: 720px;
+  margin-top: -1px;
 }
+.table-striped>tbody>tr:nth-of-type(odd){
+   background-color: #ECECEC !important;
+}
+
+
+.table-striped>tbody>tr:nth-of-type(even){
+   background-color: #D2D2D2 !important;
+}
+
+.noPadding
+{ padding: 0px !important;}

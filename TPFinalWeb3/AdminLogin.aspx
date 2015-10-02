@@ -29,7 +29,7 @@
                                 <asp:CustomValidator id="customUserName" runat="server"
                                     ControlToValidate = "UserName"
                                     CssClass="failureNotification"
-                                    ErrorMessage = "El nombre de usuario es obligatorio."
+                                    
                                     ClientValidationFunction = "campoRequerido"
                                     ValidateEmptyText =true
                                     ValidationGroup="LoginUserValidationGroup">
@@ -51,8 +51,9 @@
                                 <asp:CustomValidator id="CustomPasswordRequired" runat="server"
                                     ControlToValidate = "Password"
                                     CssClass="failureNotification"
-                                    ErrorMessage = "La contraseña es obligatoria y debe tener al menos 6 caracteres."
+                                    
                                     ClientValidationFunction = "passValidate"
+                                                                        ValidateEmptyText =true
                                     ValidationGroup="LoginUserValidationGroup">
                                     *
                                 </asp:CustomValidator>

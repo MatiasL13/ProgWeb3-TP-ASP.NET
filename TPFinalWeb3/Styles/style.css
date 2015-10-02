@@ -3584,7 +3584,8 @@ code {
   min-height: 48px;
 }
 .ibox-content {
-  background-color: #ffffff;
+  
+background-color:  rgba(255, 255, 255, 0.91);
   color: inherit;
   padding: 15px 20px 20px 20px;
   border-color: #e7eaec;
@@ -7497,7 +7498,7 @@ body.skin-3 {
 }
 .boxLogin
 {
-    margin-top: 5%;
+    margin-top: 10%;
 }
 .textCenter
 {
@@ -7507,16 +7508,4 @@ body.skin-3 {
 {
     margin-top: 20px;
     margin-bottom: 20px;
-}
-.imageBackground1
-{
-     background-image:url('/Imagenes/maraton.jpg');
- background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  height: auto;
-  max-height: 2000px;
-  min-height: 720px;
-  color: #fff;
-  margin-top: -1px;
 }

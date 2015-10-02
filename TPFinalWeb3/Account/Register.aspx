@@ -13,25 +13,12 @@
         <WizardSteps>
             <asp:CreateUserWizardStep ID="RegisterUserWizardStep" runat="server">
                 <ContentTemplate>
-                    <h2>Crear una nueva cuenta</h2>
-                    <p>
-                        Use el formulario siguiente para crear una cuenta nueva.
-                    </p>
-                    <p>
-                        Las contraseñas deben tener una longitud mínima de
-                        <%= Membership.MinRequiredPasswordLength %>
-                        caracteres.
-                    </p>
-                    <span class="failureNotification">
-                        <asp:Literal ID="ErrorMessage" runat="server"></asp:Literal>
-                    </span>
-                    <asp:ValidationSummary ID="RegisterUserValidationSummary" runat="server" CssClass="failureNotification"
-                        ValidationGroup="RegisterUserValidationGroup" />
+                
+           
                     <div class="accountInfo">
                         <fieldset class="register">
-                            <legend>Información de cuenta</legend>
                             <div class='ibox float-e-margins'>
-                                <div class="ibox-content box">
+                                <div class="ibox-content box boxLogin">
                                     <div class="form-group">
                                         <asp:Label ID="LabelUserName" runat="server" AssociatedControlID="UserName">Nombre :</asp:Label>
                                         <asp:TextBox ID="UserName" runat="server" CssClass="textEntry form-control"></asp:TextBox>
@@ -41,7 +28,7 @@
                                             ErrorMessage="El nombre de es obligatorio."
                                             ToolTip="El nombre es obligatorio." 
                                             ValidationGroup="RegisterUserValidationGroup">
-                                            *
+                                            
                                         </asp:RequiredFieldValidator>
                                         <asp:CustomValidator id="customUserName" runat="server"
                                             ControlToValidate = "UserName"
@@ -62,7 +49,7 @@
                                             ErrorMessage="El apellido es obligatorio."
                                             ToolTip="El apellido es obligatorio." 
                                             ValidationGroup="RegisterUserValidationGroup">
-                                            *
+                                            
                                         </asp:RequiredFieldValidator>
                                         <asp:CustomValidator id="CustomLastName" runat="server"
                                             ControlToValidate = "txtUserLastName"
@@ -83,7 +70,7 @@
                                             ErrorMessage="El correo electrónico es obligatorio."
                                             ToolTip="El correo electrónico es obligatorio." 
                                             ValidationGroup="RegisterUserValidationGroup">
-                                            *
+                                            
                                         </asp:RequiredFieldValidator>
                                         <asp:CustomValidator id="CustomEmailRequired" runat="server"
                                             ControlToValidate = "Email"
@@ -107,7 +94,7 @@
                                             ErrorMessage="Debe ingresar un correo v&aacute;lido"
                                             ValidationExpression="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"
                                             ValidationGroup="RegisterUserValidationGroup">
-                                            *
+                                            
                                         </asp:RegularExpressionValidator>
                                     </div>
                                     <div class="form-group">
@@ -119,7 +106,7 @@
                                             ErrorMessage="La fecha de nacimiento es obligatoria."
                                             ToolTip="La fecha de nacimiento es obligatoria." 
                                             ValidationGroup="RegisterUserValidationGroup">
-                                            *
+                                           
                                         </asp:RequiredFieldValidator>
                                         <asp:CustomValidator id="CustomFechaNac" runat="server"
                                             ControlToValidate = "txtFechaNac"
@@ -140,7 +127,7 @@
                                             ErrorMessage="El lugar de residencia es obligatorio."
                                             ToolTip="El lugar de residencia es obligatorio." 
                                             ValidationGroup="RegisterUserValidationGroup">
-                                            *
+                                            
                                         </asp:RequiredFieldValidator>
                                         <asp:CustomValidator id="CustomLugarRecidencia" runat="server"
                                             ControlToValidate = "txtLugarRecidencia"
@@ -161,13 +148,14 @@
                                             ErrorMessage="La contraseña es obligatoria." 
                                             ToolTip="La contraseña es obligatoria."
                                             ValidationGroup="RegisterUserValidationGroup">
-                                            *
+                                            
                                         </asp:RequiredFieldValidator>
                                         <asp:CustomValidator id="CustomPasswordRequired" runat="server"
                                             ControlToValidate = "Password"
                                             CssClass="failureNotification"
                                             ErrorMessage = "La contraseña es obligatoria y debe tener al menos 6 caracteres."
                                             ClientValidationFunction = "passValidate"
+                                            ValidateEmptyText =true
                                             ValidationGroup="RegisterUserValidationGroup">
                                             *
                                         </asp:CustomValidator>
@@ -182,7 +170,7 @@
                                             ErrorMessage="Confirmar contraseña es obligatorio." 
                                             ToolTip="Confirmar contraseña es obligatorio." 
                                             ValidationGroup="RegisterUserValidationGroup">
-                                            *
+                                            
                                         </asp:RequiredFieldValidator>
                                         <asp:CustomValidator id="CustomConfirmPasswordRequired" runat="server"
                                             ControlToValidate = "pswConfirmPassword"
@@ -200,7 +188,7 @@
                                             Display="Dynamic"
                                             ErrorMessage="Contraseña y Confirmar contraseña deben coincidir." 
                                             ValidationGroup="RegisterUserValidationGroup">
-                                            *
+                                            
                                         </asp:CompareValidator>
                                         <asp:CustomValidator id="CustomConfirmPasswordCompare" runat="server"
                                             ControlToValidate = "pswConfirmPassword"

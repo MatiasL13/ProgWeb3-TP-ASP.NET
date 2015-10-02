@@ -26,7 +26,7 @@
     <form id="Form1" runat="server">
         <div id="wrapper">
 
-            <div id="page-wrapper" class="gray-bg loginBody">
+            <div id="page-wrapper" class="gray-bg loginBody backGround ">
                 <div class="row border-bottom">
                     <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
            <ul class="nav navbar-top-links navbar-left">
@@ -52,6 +52,9 @@
              <AnonymousTemplate>
                 <li>
                   <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Iniciar sesión</a>
+                </li>
+                 <li>
+                  <a href="~/Account/Register.aspx" ID="A1" runat="server">Registrarse</a>
                 </li>
             </AnonymousTemplate>
         </asp:LoginView>

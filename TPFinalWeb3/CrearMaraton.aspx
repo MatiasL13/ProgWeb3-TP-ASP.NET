@@ -1,4 +1,3 @@
-﻿<<<<<<< HEAD
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admins.master" AutoEventWireup="true"
     CodeBehind="CrearMaraton.aspx.cs" Inherits="TPFinalWeb3.Formulario_web15" %>
 
@@ -19,8 +18,8 @@
                                     *
                 </asp:RequiredFieldValidator>
                 <asp:CustomValidator ID="customUserName" runat="server" ControlToValidate="txtNombre"
-                    CssClass="failureNotification" ErrorMessage="El nombre de maraton es obligatorio."
-                    ClientValidationFunction="campoRequerido" ValidateEmptyText="true" ValidationGroup="CrearMaratonValidationGroup">
+                    CssClass="failureNotification" ClientValidationFunction="campoRequerido" ValidateEmptyText="true"
+                    ValidationGroup="CrearMaratonValidationGroup">
                                             *
                 </asp:CustomValidator>
             </div>
@@ -33,8 +32,8 @@
                                     *
                 </asp:RequiredFieldValidator>
                 <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="txtCantParticipantes"
-                    CssClass="failureNotification" ErrorMessage="la cantidad de participantes es obligatorio."
-                    ClientValidationFunction="campoRequerido" ValidateEmptyText="true" ValidationGroup="CrearMaratonValidationGroup">
+                    CssClass="failureNotification" ClientValidationFunction="campoRequerido" ValidateEmptyText="true"
+                    ValidationGroup="CrearMaratonValidationGroup">
                                             *
                 </asp:CustomValidator>
             </div>
@@ -46,8 +45,8 @@
                                     *
                 </asp:RequiredFieldValidator>
                 <asp:CustomValidator ID="CustomValidator2" runat="server" ControlToValidate="txtLugarSalida"
-                    CssClass="failureNotification" ErrorMessage="El lugar es obligatorio." ClientValidationFunction="campoRequerido"
-                    ValidateEmptyText="true" ValidationGroup="CrearMaratonValidationGroup">
+                    CssClass="failureNotification" ClientValidationFunction="campoRequerido" ValidateEmptyText="true"
+                    ValidationGroup="CrearMaratonValidationGroup">
                                             *
                 </asp:CustomValidator>
             </div>
@@ -60,8 +59,8 @@
                                     *
                 </asp:RequiredFieldValidator>
                 <asp:CustomValidator ID="CustomValidator3" runat="server" ControlToValidate="txtCantLista"
-                    CssClass="failureNotification" ErrorMessage="El cantidad de espera es obligatorio."
-                    ClientValidationFunction="campoRequerido" ValidateEmptyText="true" ValidationGroup="CrearMaratonValidationGroup">
+                    CssClass="failureNotification" ClientValidationFunction="campoRequerido" ValidateEmptyText="true"
+                    ValidationGroup="CrearMaratonValidationGroup">
                                             *
                 </asp:CustomValidator>
             </div>
@@ -104,7 +103,6 @@
                     Type="Double"></asp:RangeValidator>
             </div>
             <div class="submitButton">
-
                 <asp:Button ID="btnCrearMaraton" runat="server" class="btn btn-success" CommandName="MoveNext"
                     Text="Crear Maraton" ValidationGroup="CrearMaratonValidationGroup" />
             </div>

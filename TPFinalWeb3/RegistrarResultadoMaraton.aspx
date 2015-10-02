@@ -37,7 +37,7 @@
                 <asp:CustomValidator id="customPosicionRequired" runat="server"
                     ControlToValidate = "txtPosicion"
                     CssClass="failureNotification"
-                    ErrorMessage = "La posici&oacute;n es obligatoria."
+                    
                     ClientValidationFunction = "campoRequerido"
                     ValidateEmptyText =true
                     ValidationGroup="ResultadosValidationGroup">
@@ -53,7 +53,7 @@
                 <asp:CustomValidator id="CustomPosicionIsNotNumber" runat="server"
                     ControlToValidate = "txtPosicion"
                     CssClass="failureNotification"
-                    ErrorMessage = "La posici&oacute;n debe ser un n&uacute;mero."
+                    
                     ClientValidationFunction = "shouldBeNumber"
                     ValidationGroup="ResultadosValidationGroup">
                     *
@@ -72,7 +72,7 @@
                 <asp:CustomValidator id="CustomTiempoRequired" runat="server"
                     ControlToValidate = "txtTiempo"
                     CssClass="failureNotification"
-                    ErrorMessage = "El tiempo es obligatorio."
+                    
                     ClientValidationFunction = "campoRequerido"
                     ValidateEmptyText =true
                     ValidationGroup="ResultadosValidationGroup">
@@ -88,7 +88,7 @@
                 <asp:CustomValidator id="CustomTiempoIsNotNumber" runat="server"
                     ControlToValidate = "txtTiempo"
                     CssClass="failureNotification"
-                    ErrorMessage = "El tiempo debe ser un n&uacute;mero."
+                    
                     ClientValidationFunction = "shouldBeNumber"
                     ValidationGroup="ResultadosValidationGroup">
                     *
