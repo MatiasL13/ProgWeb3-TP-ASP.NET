@@ -5,16 +5,7 @@
     
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-    <asp:CreateUserWizard ID="RegisterUser" runat="server" EnableViewState="false" OnCreatedUser="RegisterUser_CreatedUser">
-        <LayoutTemplate>
-            <asp:PlaceHolder ID="wizardStepPlaceholder" runat="server"></asp:PlaceHolder>
-            <asp:PlaceHolder ID="navigationPlaceholder" runat="server"></asp:PlaceHolder>
-        </LayoutTemplate>
-        <WizardSteps>
-            <asp:CreateUserWizardStep ID="RegisterUserWizardStep" runat="server">
-                <ContentTemplate>
-                
-           
+
                     <div class="accountInfo">
                         <fieldset class="register">
                             <div class='ibox float-e-margins'>
@@ -201,18 +192,14 @@
                                     </div>
                                     <div class="submitButton">
                                         <asp:Button ID="CreateUserButton" runat="server" class="btn btn-success" CommandName="MoveNext"
-                                            Text="Crear usuario" ValidationGroup="RegisterUserValidationGroup" />
+                                            Text="Crear usuario" ValidationGroup="RegisterUserValidationGroup" 
+                                            onclick="RegisterUser_CreatedUser" />
                                     </div>
                                 </div>
                             </div>
                         </fieldset>
                     </div>
-                </ContentTemplate>
-                <CustomNavigationTemplate>
-                </CustomNavigationTemplate>
-            </asp:CreateUserWizardStep>
-        </WizardSteps>
-    </asp:CreateUserWizard>
+               
     <%--<script type="text/javascript" src="../Scripts/registro.js"></script>--%>
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/registro.js")%>"></script>
 </asp:Content>

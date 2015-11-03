@@ -91,7 +91,7 @@ namespace TPFinalWeb3 {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls. requiredtxtApellido;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredtxtApellido;
         
         /// <summary>
         /// Control CustomtxtApellidoRequired.

@@ -17,8 +17,8 @@ namespace TPFinalWeb3
             bool resultado = Int32.TryParse(hola, out conversion);
          int numero = 123;
           string hola2 =  numero.ToString();
-            if(resultado)
-                lblCarreraStatus.Text = "CORRECTO!"
+          if (resultado)
+              lblCarreraStatus.Text = "CORRECTO!";
         }
     }
 }

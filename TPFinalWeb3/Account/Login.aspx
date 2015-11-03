@@ -5,9 +5,7 @@
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
   
-    <asp:Login ID="LoginUser" runat="server" EnableViewState="false" RenderOuterTable="false"
-        DestinationPageUrl="~/Default.aspx">
-        <LayoutTemplate>
+    
           
             <div class="accountInfo">
                 <fieldset class="login">
@@ -56,19 +54,17 @@
                                     *
                                 </asp:CustomValidator>
                             </div>
-                            <div class="form-group">
-                                <asp:CheckBox ID="RememberMe" runat="server" />
-                                <asp:Label ID="RememberMeLabel" runat="server" AssociatedControlID="RememberMe" CssClass="inline">Mantenerme conectado</asp:Label>
-                            </div>
+                      
                             <div class="submitButton">
-                                <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Iniciar sesión"
-                                    class="btn btn-success" ValidationGroup="LoginUserValidationGroup" />
+                                <asp:Button ID="LoginButton" runat="server"  Text="Iniciar sesión"
+                                    class="btn btn-success" ValidationGroup="LoginUserValidationGroup" 
+                                    onclick="LoginButton_Click" />
+                                   
                             </div>
                         </div>
                     </div>
                 </fieldset>
             </div>
-        </LayoutTemplate>
-    </asp:Login>
+
     <script type="text/javascript" src="../Scripts/registro.js"></script>
 </asp:Content>

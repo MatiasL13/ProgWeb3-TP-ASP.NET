@@ -16,6 +16,11 @@ namespace TPFinalWeb3
             {
                 HttpContext.Current.Response.Redirect("UserIndex.aspx", true);
             }
+               ResultadoMaratonParticipante  resultadoDatos = new ResultadoMaratonParticipante();
+            PW3_20152C_TP2_MaratonesEntities3 context = new PW3_20152C_TP2_MaratonesEntities3();
+
+            GVResultados.DataSource = context.ResultadoMaratonParticipante;
+            GVResultados.DataBind();
 
         }
     }
