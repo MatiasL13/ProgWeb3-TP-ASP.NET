@@ -25,7 +25,7 @@ namespace TPFinalWeb3.Account
             bool dateConvert = DateTime.TryParse(txtFechaNac.Text, out fecha);
 
 
-            usuario.Nombre = txtUserLastName.Text;
+            usuario.Nombre = UserName.Text;
             usuario.Apellido = txtUserLastName.Text;
             usuario.LugarResidencia = txtLugarRecidencia.Text;
             usuario.Email = Email.Text;
@@ -37,15 +37,18 @@ namespace TPFinalWeb3.Account
             context.SaveChanges();
         
 
-            FormsAuthentication.SetAuthCookie(usuario.IdUsuario.ToString(), false /* createPersistentCookie */); // carga la cookie con el id de usuario
-
-            //Roles.AddUserToRole(RegisterUser.UserName, "user");
-
-            //string continueUrl = usuario.ContinueDestinationPageUrl;
-            //if (String.IsNullOrEmpty(continueUrl))
-            //{
-            //    continueUrl = "~/";
-            //}
+            string roles = "Member";
+            FormsAuthenticationTicket authTicket = new FormsAuthenticationTicket(
+              1,
+              usuario.IdUsuario.ToString() + "-" + usuario.Nombre.ToString(),  //user id
+              DateTime.Now,
+              DateTime.Now.AddMinutes(20),  // expiry
+              false,  //do not remember
+              roles,
+              "/");
+            HttpCookie cookie = new HttpCookie(FormsAuthentication.FormsCookieName,
+                                               FormsAuthentication.Encrypt(authTicket));
+            Response.Cookies.Add(cookie);
             Response.Redirect("/default.aspx");
         }
     }

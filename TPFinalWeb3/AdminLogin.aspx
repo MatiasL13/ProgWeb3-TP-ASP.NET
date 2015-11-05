@@ -58,14 +58,12 @@
                                     *
                                 </asp:CustomValidator>
                             </div>
-                            <div class="form-group">
-                                <asp:CheckBox ID="RememberMe" runat="server" />
-                                <asp:Label ID="RememberMeLabel" runat="server" AssociatedControlID="RememberMe" CssClass="inline">Mantenerme conectado</asp:Label>
-                            </div>
+                         
                             <div class="submitButton">
                                 <asp:Button ID="LoginButton"  runat="server" CommandName="Login" Text="Iniciar sesión"
                                     class="btn btn-success" ValidationGroup="LoginUserValidationGroup" 
                                     onclick="LoginButton_Click" />
+                                    <asp:Label ID="lblIncorrecto" runat="server"  Text=""></asp:Label>
                             </div>
                         </div>
                     </div>

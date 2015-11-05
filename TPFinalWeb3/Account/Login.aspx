@@ -56,10 +56,11 @@
                             </div>
                       
                             <div class="submitButton">
+                               
                                 <asp:Button ID="LoginButton" runat="server"  Text="Iniciar sesión"
                                     class="btn btn-success" ValidationGroup="LoginUserValidationGroup" 
                                     onclick="LoginButton_Click" />
-                                   
+                                    <asp:Label ID="lblIncorrecto" runat="server"  Text=""></asp:Label>
                             </div>
                         </div>
                     </div>
