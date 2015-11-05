@@ -96,7 +96,8 @@
             </div>
             <div class="submitButton">
                 <asp:Button ID="btnEditarUser" runat="server" class="btn btn-success" CommandName="MoveNext"
-                    Text="Editar Datos" ValidationGroup="UserValidationGroup" />
+                    Text="Editar Datos" ValidationGroup="UserValidationGroup" 
+                    onclick="btnEditarUser_Click" />
             </div>
         </div>
     </div>

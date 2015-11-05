@@ -10,11 +10,7 @@ namespace TPFinalWeb3
 {
     public partial class AdminLogin : System.Web.UI.Page
     {
-        public string adminSession
-        {
-            get { return Session["admin"] as string; }
-            set { Session.Add("admin", value); }
-        }
+  
         protected void Page_Load(object sender, EventArgs e)
         {
 

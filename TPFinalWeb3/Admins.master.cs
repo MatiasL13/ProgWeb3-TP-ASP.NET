@@ -9,11 +9,7 @@ namespace TPFinalWeb3
 {
     public partial class Admins : System.Web.UI.MasterPage
     {
-        public string adminSession
-        {
-            get { return Session["admin"] as string; }
-            set { Session.Add("admin", value); }
-        }
+    
 
         protected void Page_Load(object sender, EventArgs e)
         {

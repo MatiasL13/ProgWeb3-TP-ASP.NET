@@ -104,7 +104,8 @@
             </div>
             <div class="submitButton">
                 <asp:Button ID="btnCrearMaraton" runat="server" class="btn btn-success" CommandName="MoveNext"
-                    Text="Crear Maraton" ValidationGroup="CrearMaratonValidationGroup" />
+                    Text="Crear Maraton" ValidationGroup="CrearMaratonValidationGroup" 
+                    onclick="btnCrearMaraton_Click" />
             </div>
         </div>
     </div>

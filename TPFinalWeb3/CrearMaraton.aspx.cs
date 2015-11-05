@@ -13,5 +13,32 @@ namespace TPFinalWeb3
         {
 
         }
+
+        protected void btnCrearMaraton_Click(object sender, EventArgs e)
+        {
+            int cantidadMaximaParticipantes = 0, primerPremio = 0, segundoPremio = 0, tercerPremio = 0, cantidadListaEspera = 0;
+            Maraton maraton = new Maraton();
+            PW3_20152C_TP2_MaratonesEntities3 context = new PW3_20152C_TP2_MaratonesEntities3();
+
+            bool parseParticipantes = Int32.TryParse(txtCantParticipantes.Text, out  cantidadMaximaParticipantes);
+            bool parseLista = Int32.TryParse(txtCantLista.Text, out  cantidadListaEspera);
+            bool parsePrimerPremio = Int32.TryParse(txtPuesto1.Text, out  primerPremio);
+            bool parseSegundoPremio = Int32.TryParse(txtPuesto2.Text, out  segundoPremio);
+            bool parseTercerPremio = Int32.TryParse(txtPuesto3.Text, out  tercerPremio);
+
+            if (parseParticipantes || parseLista || parsePrimerPremio || parseSegundoPremio || parseTercerPremio)
+            {
+                maraton.Nombre = txtNombre.Text;
+                maraton.MaxParticipantes = cantidadMaximaParticipantes;
+                maraton.LugarSalida = txtLugarSalida.Text;
+                maraton.ParticipantesEnEspera = cantidadListaEspera;
+                maraton.PrimerPremio = primerPremio;
+                maraton.SegundoPremio = segundoPremio;
+                maraton.TercerPremio = tercerPremio;
+
+            }
+            context.Maraton.AddObject(maraton);
+            context.SaveChanges();
+        }
     }
 }
