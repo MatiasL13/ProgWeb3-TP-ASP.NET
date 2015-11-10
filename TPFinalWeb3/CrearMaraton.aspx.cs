@@ -39,6 +39,16 @@ namespace TPFinalWeb3
             }
             context.Maraton.AddObject(maraton);
             context.SaveChanges();
+
+            /**/
+            txtNombre.Text = null;
+            txtCantLista.Text = null;
+            txtLugarSalida.Text = null;
+            txtCantParticipantes.Text = null;
+            txtPuesto1.Text = null;
+            txtPuesto2.Text = null;
+            txtPuesto3.Text = null;
+
         }
     }
 }

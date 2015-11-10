@@ -1,4 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TPFinalWeb3.SiteMaster" %>
+<%@ Register TagPrefix="uc" TagName="footer" Src="FooterUserControl.ascx" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
@@ -107,15 +108,7 @@
             </div>
                 <div class="clear">
                 </div>
-                <div class="footer">
-                    <p>
-                        Universidad Nacional de La Matanza -Dpto. de Ingeniería e Investigaciones Tecnológicas.
-                    ­ Tecnicatura en Desarrollo Web ­ Programación Web III
-                    </p>
-                    <p>
-                        Integrantes: Guido Pardo - Leandro Parga - Matias Leonel Sanchez
-                    </p>
-                </div>
+                <uc:footer id="footerID" runat="server"/>
             </div>
         </div>
     </form>

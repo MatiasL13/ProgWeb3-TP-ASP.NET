@@ -8,3 +8,9 @@ C:\Users\Ziero-N03\documents\visual studio 2010\Projects\TPFinalWeb3\TPFinalWeb3
 C:\Users\Ziero-N03\documents\visual studio 2010\Projects\TPFinalWeb3\TPFinalWeb3\bin\TPFinalWeb3.pdb
 C:\Users\Ziero-N03\documents\visual studio 2010\Projects\TPFinalWeb3\TPFinalWeb3\obj\Debug\TPFinalWeb3.dll
 C:\Users\Ziero-N03\documents\visual studio 2010\Projects\TPFinalWeb3\TPFinalWeb3\obj\Debug\TPFinalWeb3.pdb
+C:\Users\parga\OneDrive\Documentos\Visual Studio 2015\Projects\PW3\ProgWeb3-TP-ASP.NET\TPFinalWeb3\bin\TPFinalWeb3.dll.config
+C:\Users\parga\OneDrive\Documentos\Visual Studio 2015\Projects\PW3\ProgWeb3-TP-ASP.NET\TPFinalWeb3\bin\TPFinalWeb3.dll
+C:\Users\parga\OneDrive\Documentos\Visual Studio 2015\Projects\PW3\ProgWeb3-TP-ASP.NET\TPFinalWeb3\bin\TPFinalWeb3.pdb
+C:\Users\parga\OneDrive\Documentos\Visual Studio 2015\Projects\PW3\ProgWeb3-TP-ASP.NET\TPFinalWeb3\obj\Debug\TPFinalWeb3.csprojResolveAssemblyReference.cache
+C:\Users\parga\OneDrive\Documentos\Visual Studio 2015\Projects\PW3\ProgWeb3-TP-ASP.NET\TPFinalWeb3\obj\Debug\TPFinalWeb3.dll
+C:\Users\parga\OneDrive\Documentos\Visual Studio 2015\Projects\PW3\ProgWeb3-TP-ASP.NET\TPFinalWeb3\obj\Debug\TPFinalWeb3.pdb
