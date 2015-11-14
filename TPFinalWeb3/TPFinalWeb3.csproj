@@ -84,7 +84,7 @@
     <Content Include="Scripts\datapicker\bootstrap-datepicker.js" />
     <Content Include="Scripts\datapicker\locales\bootstrap-datepicker.es.js" />
     <Content Include="Scripts\DatosDeUsuario.js" />
-    <Content Include="Scripts\registro.js" />
+    <Content Include="Scripts\datepicker.js" />
     <Content Include="Scripts\validaciones.js" />
     <Content Include="UserIndex.aspx" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -113,6 +113,7 @@
     </Content>
     <Content Include="WebForm1.aspx" />
     <Content Include="FooterUserControl.ascx" />
+    <Content Include="WebService1.asmx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CrearMaraton.aspx.cs">
@@ -249,6 +250,10 @@
     </Compile>
     <Compile Include="FooterUserControl.ascx.designer.cs">
       <DependentUpon>FooterUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

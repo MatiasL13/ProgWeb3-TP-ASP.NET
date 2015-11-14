@@ -201,5 +201,5 @@
                     </div>
                
     <%--<script type="text/javascript" src="../Scripts/registro.js"></script>--%>
-    <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/registro.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/datepicker.js")%>"></script>
 </asp:Content>

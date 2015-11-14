@@ -20,11 +20,14 @@ namespace TPFinalWeb3
             Maraton maraton = new Maraton();
             PW3_20152C_TP2_MaratonesEntities3 context = new PW3_20152C_TP2_MaratonesEntities3();
 
+            DateTime fecha;
+
             bool parseParticipantes = Int32.TryParse(txtCantParticipantes.Text, out  cantidadMaximaParticipantes);
             bool parseLista = Int32.TryParse(txtCantLista.Text, out  cantidadListaEspera);
             bool parsePrimerPremio = Int32.TryParse(txtPuesto1.Text, out  primerPremio);
             bool parseSegundoPremio = Int32.TryParse(txtPuesto2.Text, out  segundoPremio);
             bool parseTercerPremio = Int32.TryParse(txtPuesto3.Text, out  tercerPremio);
+            bool dateConvert = DateTime.TryParse(txtFechaInicio.Text, out fecha);
 
             if (parseParticipantes || parseLista || parsePrimerPremio || parseSegundoPremio || parseTercerPremio)
             {
@@ -35,6 +38,7 @@ namespace TPFinalWeb3
                 maraton.PrimerPremio = primerPremio;
                 maraton.SegundoPremio = segundoPremio;
                 maraton.TercerPremio = tercerPremio;
+                maraton.FechaHorarioComienzo = fecha;
 
             }
             context.Maraton.AddObject(maraton);
@@ -48,6 +52,7 @@ namespace TPFinalWeb3
             txtPuesto1.Text = null;
             txtPuesto2.Text = null;
             txtPuesto3.Text = null;
+            txtFechaInicio.Text = null;
 
         }
     }

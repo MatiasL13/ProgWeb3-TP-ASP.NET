@@ -102,6 +102,19 @@
                     ControlToValidate="txtPuesto3" MinimumValue="500" MaximumValue="5000" ValidationGroup="CrearMaratonValidationGroup"
                     Type="Double"></asp:RangeValidator>
             </div>
+            <div class="form-group">
+                                        <asp:Label ID="LabelFechaInicio" runat="server" AssociatedControlID="txtFechaInicio">Fecha y hora de largada:</asp:Label>
+                                        <asp:TextBox ID="txtFechaInicio" class="form-control datepicker" runat="server"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="RequiredFechaInicio" runat="server" 
+                                            ControlToValidate="txtFechaInicio"
+                                            CssClass="failureNotification" 
+                                            ErrorMessage="La fecha y hora de largada es obligatorio."
+                                            ToolTip="La fecha y hora de largada es obligatorio." 
+                                            ValidationGroup="CrearMaratonValidationGroup"
+                                            EnableClientScript="true">
+                                           
+                                        </asp:RequiredFieldValidator>
+            </div>
             <div class="submitButton">
                 <asp:Button ID="btnCrearMaraton" runat="server" class="btn btn-success" CommandName="MoveNext"
                     Text="Crear Maraton" ValidationGroup="CrearMaratonValidationGroup" 
@@ -111,4 +124,5 @@
     </div>
     <div class="separador00">
     </div>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/datepicker.js")%>"></script>
 </asp:Content>

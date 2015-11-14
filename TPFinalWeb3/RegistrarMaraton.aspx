@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Users.master" AutoEventWireup="true" CodeBehind="RegistrarMaraton.aspx.cs" Inherits="TPFinalWeb3.Formulario_web16" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="UserMainContent" runat="server">
 
-<table class="table">
+<!--<table class="table">
   <thead>
     <tr>
       <th>Maraton</th>
@@ -26,7 +26,9 @@
       <td>25/10/2015</td>
       <td>02:34</td>
       <td>1500$</td>
-      <td><button class="btn btn-success">Registrarse</button></td>
+      <td><button class="btn btn-success">Registrarse</button>
+          
+        </td>
     </tr>
     <tr>
       <td>3</td>
@@ -37,6 +39,7 @@
       <td><button class="btn btn-success">Registrarse</button></td>
     </tr>
   </tbody>
-  </table>
+  </table>-->
+    <asp:Table ID="TableMaratones" runat="server" CssClass="table table-hover"></asp:Table>
 
 </asp:Content>
