@@ -21,9 +21,8 @@
             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
             </div>
             <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                <h2 class="text-center whiteTrans ">
-                    Resultados Buenos Aires Corre 2015</h2>
-                <asp:GridView ID="GVResultados" runat="server">
+                <h2 class="text-center whiteTrans " id="hMaraton" runat="server"></h2>
+                <asp:GridView ID="GVResultados" runat="server" CssClass="table table-striped">
                     <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
                 </asp:GridView>
             </div>
