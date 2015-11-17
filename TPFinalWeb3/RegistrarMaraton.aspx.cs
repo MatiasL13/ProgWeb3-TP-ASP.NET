@@ -11,9 +11,13 @@ namespace TPFinalWeb3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            this.GVMaratones_load();
+        }
+
+        private void GVMaratones_load()
+        {
             PW3_20152C_TP2_MaratonesEntities3 context = new PW3_20152C_TP2_MaratonesEntities3();
-            
+
             //Obtengo codigo de usuario
             Usuario user = GetIdUsuario(context);
             int IdUsuario = user.IdUsuario;
@@ -26,13 +30,19 @@ namespace TPFinalWeb3
                                                                             (from rm in context.ResultadoMaratonParticipante
                                                                              where rm.IdMaraton == m.IdMaraton
                                                                              select rm).Count()
-                        &&  !(from rm in context.ResultadoMaratonParticipante
-                                        where rm.IdUsuario == IdUsuario
-                                        select rm.IdMaraton).Contains(m.IdMaraton)
+                        && !(from rm in context.ResultadoMaratonParticipante
+                             where rm.IdUsuario == IdUsuario
+                             select rm.IdMaraton).Contains(m.IdMaraton)
 
-                        select new { m.IdMaraton, m.Nombre, m.LugarSalida, m.FechaHorarioComienzo, estado = ((from rm in context.ResultadoMaratonParticipante
-                                                                                                               where rm.IdMaraton == m.IdMaraton
-                                                                                                               select rm).Count()) >= m.MaxParticipantes ? "En Espera":"Disponible"
+                        select new
+                        {
+                            m.IdMaraton,
+                            m.Nombre,
+                            m.LugarSalida,
+                            m.FechaHorarioComienzo,
+                            estado = ((from rm in context.ResultadoMaratonParticipante
+                                       where rm.IdMaraton == m.IdMaraton
+                                       select rm).Count()) >= m.MaxParticipantes ? "En Espera" : "Disponible"
                         };
             String mensaje = "No existen maratones disponibles por el momento";
             if (query.Count() > 0)
@@ -43,38 +53,6 @@ namespace TPFinalWeb3
             }
 
             hMaraton.InnerText = mensaje;
-
-        }
-
-        void GVMaratones_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            if (e.CommandName == "Inscribirme")
-            {
-                // Retrieve the row index stored in the 
-                // CommandArgument property.
-                int index = Convert.ToInt32(e.CommandArgument);
-                
-                // Retrieve the row that contains the button 
-                // from the Rows collection.
-                GridViewRow row = GVMaratones.Rows[index];
-
-                PW3_20152C_TP2_MaratonesEntities3 context = new PW3_20152C_TP2_MaratonesEntities3();
-
-                ResultadoMaratonParticipante resultadoMaraton = new ResultadoMaratonParticipante();
-                Usuario user = GetIdUsuario(context);
-                int IdUsuario = user.IdUsuario;
-
-                resultadoMaraton.IdMaraton = Int32.Parse(row.Cells[0].Text);
-                resultadoMaraton.IdUsuario = IdUsuario;
-                resultadoMaraton.NroInscripcion = 123;
-
-                context.ResultadoMaratonParticipante.AddObject(resultadoMaraton);
-                context.SaveChanges();
-
-                GVMaratones.DataBind();
-
-            }
-            
         }
 
         public void CustomersGridView_SelectedIndexChanged(Object sender, EventArgs e)
@@ -96,14 +74,23 @@ namespace TPFinalWeb3
             int IdMaraton = 0;
             bool id_maraton = Int32.TryParse(row.Cells[1].Text, out IdMaraton);
 
+            var qc = (from rm in context.ResultadoMaratonParticipante
+                      select rm).ToList();
+
+            int cantidad = qc.Count();
+            cantidad++;
+        
+
             if (id_maraton)
             {
                 resultadoMaraton.IdMaraton = IdMaraton;
                 resultadoMaraton.IdUsuario = IdUsuario;
-                resultadoMaraton.NroInscripcion = 123;
+                resultadoMaraton.NroInscripcion = cantidad;
                 context.ResultadoMaratonParticipante.AddObject(resultadoMaraton);
                 context.SaveChanges();
-                
+
+                this.GVMaratones_load();
+
             }
             else
             {
