@@ -11,8 +11,14 @@ namespace TPFinalWeb3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ResultadoMaratonParticipante resultadoDatos = new ResultadoMaratonParticipante();
+            
             PW3_20152C_TP2_MaratonesEntities3 context = new PW3_20152C_TP2_MaratonesEntities3();
+            
+            //Obtengo codigo de usuario
+            Usuario user = GetIdUsuario(context);
+            int IdUsuario = user.IdUsuario;
+            //------------------------------
+
 
             var query = from m in context.Maraton
                         where m.FechaHorarioComienzo >= DateTime.Now
@@ -20,7 +26,14 @@ namespace TPFinalWeb3
                                                                             (from rm in context.ResultadoMaratonParticipante
                                                                              where rm.IdMaraton == m.IdMaraton
                                                                              select rm).Count()
-                        select new { m.Nombre, m.LugarSalida, m.FechaHorarioComienzo };
+                        &&  !(from rm in context.ResultadoMaratonParticipante
+                                        where rm.IdUsuario == IdUsuario
+                                        select rm.IdMaraton).Contains(m.IdMaraton)
+
+                        select new { m.IdMaraton, m.Nombre, m.LugarSalida, m.FechaHorarioComienzo, estado = ((from rm in context.ResultadoMaratonParticipante
+                                                                                                               where rm.IdMaraton == m.IdMaraton
+                                                                                                               select rm).Count()) >= m.MaxParticipantes ? "En Espera":"Disponible"
+                        };
             String mensaje = "No existen maratones disponibles por el momento";
             if (query.Count() > 0)
             {
@@ -31,32 +44,91 @@ namespace TPFinalWeb3
 
             hMaraton.InnerText = mensaje;
 
-
-
-            /*var consulta = context.Maraton.Where(m=>m.FechaHorarioComienzo>= DateTime.Now)
-            var consulta=   from m in context.Maraton
-                            where m.FechaHorarioComienzo >= DateTime.Now
-                            group m by a.ResolvedDate into g
-                            select new { ResolvedOn = g.Key, NumberResolved = g.Count() }
-                TableMaratones. = context.Maraton;
-            TableMaratones.DataBind();*/
         }
 
-        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        void GVMaratones_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName == "Inscribirme")
             {
                 // Retrieve the row index stored in the 
                 // CommandArgument property.
                 int index = Convert.ToInt32(e.CommandArgument);
-
+                
                 // Retrieve the row that contains the button 
                 // from the Rows collection.
                 GridViewRow row = GVMaratones.Rows[index];
 
-                // Add code here to add the item to the shopping cart.
+                PW3_20152C_TP2_MaratonesEntities3 context = new PW3_20152C_TP2_MaratonesEntities3();
+
+                ResultadoMaratonParticipante resultadoMaraton = new ResultadoMaratonParticipante();
+                Usuario user = GetIdUsuario(context);
+                int IdUsuario = user.IdUsuario;
+
+                resultadoMaraton.IdMaraton = Int32.Parse(row.Cells[0].Text);
+                resultadoMaraton.IdUsuario = IdUsuario;
+                resultadoMaraton.NroInscripcion = 123;
+
+                context.ResultadoMaratonParticipante.AddObject(resultadoMaraton);
+                context.SaveChanges();
+
+                GVMaratones.DataBind();
+
+            }
+            
+        }
+
+        public void CustomersGridView_SelectedIndexChanged(Object sender, EventArgs e)
+        {
+            // Get the currently selected row using the SelectedRow property.
+            GridViewRow row = GVMaratones.SelectedRow;
+
+            // Display the first name from the selected row.
+            // In this example, the third column (index 2) contains
+            // the first name.
+            //MessageLabel.Text = "You selected " + row.Cells[2].Text + ".";
+
+            PW3_20152C_TP2_MaratonesEntities3 context = new PW3_20152C_TP2_MaratonesEntities3();
+
+            ResultadoMaratonParticipante resultadoMaraton = new ResultadoMaratonParticipante();
+            Usuario user = GetIdUsuario(context);
+            int IdUsuario = user.IdUsuario;
+
+            int IdMaraton = 0;
+            bool id_maraton = Int32.TryParse(row.Cells[1].Text, out IdMaraton);
+
+            if (id_maraton)
+            {
+                resultadoMaraton.IdMaraton = IdMaraton;
+                resultadoMaraton.IdUsuario = IdUsuario;
+                resultadoMaraton.NroInscripcion = 123;
+                context.ResultadoMaratonParticipante.AddObject(resultadoMaraton);
+                context.SaveChanges();
+                
+            }
+            else
+            {
+                mensaje.InnerText = "error: " + row.Cells[1].Text;
+            }
+            
+        }
+
+        private Usuario GetIdUsuario(PW3_20152C_TP2_MaratonesEntities3 context)
+        {
+
+            int result = 0;
+            string[] id = HttpContext.Current.User.Identity.Name.Split('-');
+            bool ok = Int32.TryParse(id[0], out result);
+
+            try
+            {
+                return context.Usuario.Where(r => r.IdUsuario == result).First();
+            }
+            catch (Exception ex)
+            {
+                return null;
             }
 
         }
+
     }
 }
