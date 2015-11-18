@@ -11,14 +11,6 @@ namespace TPFinalWeb3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*string hola = "123";
-            int conversion;
-
-            bool resultado = Int32.TryParse(hola, out conversion);
-         int numero = 123;
-          string hola2 =  numero.ToString();
-          if (resultado)
-              lblCarreraStatus.Text = "CORRECTO!";*/
 
             PW3_20152C_TP2_MaratonesEntities3 context = new PW3_20152C_TP2_MaratonesEntities3();
 
@@ -34,6 +26,35 @@ namespace TPFinalWeb3
             DDLParticipante.DataTextField="NombreCompleto";
             DDLParticipante.DataSource = part;
             DDLParticipante.DataBind();
+
+        }
+
+        protected void btnRegistrarResultados_Click(object sender, EventArgs e)
+        {
+            PW3_20152C_TP2_MaratonesEntities3 context = new PW3_20152C_TP2_MaratonesEntities3();
+
+            int id_maraton = Int32.Parse(DDLMaraton.SelectedValue);
+            int id_usuario = Int32.Parse(DDLParticipante.SelectedValue);
+            string estado = DDLCarreraStatus.SelectedValue;
+            bool estadobool = false;
+            if (estado == "true")
+            {
+                estadobool = true;
+            }                
+
+            ResultadoMaratonParticipante resultadoMaraton = (from rm in context.ResultadoMaratonParticipante
+                                                            where rm.IdMaraton == id_maraton && rm.IdUsuario == id_usuario
+                                                            select rm).First();
+
+            resultadoMaraton.PosicionFinal = Int32.Parse(txtPosicion.Text);
+            resultadoMaraton.TiempoLlegada = Int32.Parse(txtTiempo.Text);
+            resultadoMaraton.Finalizo = estadobool;
+
+            context.SaveChanges();
+
+            txtPosicion.Text = "";
+            txtTiempo.Text = "";
+
         }
     }
 }

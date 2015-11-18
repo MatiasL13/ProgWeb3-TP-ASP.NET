@@ -23,16 +23,16 @@ namespace TPFinalWeb3
             int IdUsuario = user.IdUsuario;
             //------------------------------
 
-
+            //Query Maratones disponibles para inscripcion. Verifica fecha de inscripcion, solo muestra en caso de haber disponibilidad y ademas verifica si el que el usuario logueado no este previamente inscripto
             var query = from m in context.Maraton
                         where m.FechaHorarioComienzo >= DateTime.Now
                           && (m.MaxParticipantes + m.ParticipantesEnEspera) >
                                                                             (from rm in context.ResultadoMaratonParticipante
                                                                              where rm.IdMaraton == m.IdMaraton
                                                                              select rm).Count()
-                        && !(from rm in context.ResultadoMaratonParticipante
-                             where rm.IdUsuario == IdUsuario
-                             select rm.IdMaraton).Contains(m.IdMaraton)
+                        //&& !(from rm in context.ResultadoMaratonParticipante
+                        //     where rm.IdUsuario == IdUsuario
+                        //     select rm.IdMaraton).Contains(m.IdMaraton)
 
                         select new
                         {
@@ -40,9 +40,12 @@ namespace TPFinalWeb3
                             m.Nombre,
                             m.LugarSalida,
                             m.FechaHorarioComienzo,
-                            estado = ((from rm in context.ResultadoMaratonParticipante
+                            estado = (from rm in context.ResultadoMaratonParticipante
+                                      where rm.IdMaraton == m.IdMaraton
+                                      select rm.IdUsuario).Contains(IdUsuario) ? "Inscripto" :
+                                      (((from rm in context.ResultadoMaratonParticipante
                                        where rm.IdMaraton == m.IdMaraton
-                                       select rm).Count()) >= m.MaxParticipantes ? "En Espera" : "Disponible"
+                                       select rm).Count()) >= m.MaxParticipantes ? "En Espera" :  "Disponible")
                         };
             String mensaje = "No existen maratones disponibles por el momento";
             if (query.Count() > 0)
@@ -57,28 +60,25 @@ namespace TPFinalWeb3
 
         public void CustomersGridView_SelectedIndexChanged(Object sender, EventArgs e)
         {
-            // Get the currently selected row using the SelectedRow property.
+           
             GridViewRow row = GVMaratones.SelectedRow;
-
-            // Display the first name from the selected row.
-            // In this example, the third column (index 2) contains
-            // the first name.
-            //MessageLabel.Text = "You selected " + row.Cells[2].Text + ".";
 
             PW3_20152C_TP2_MaratonesEntities3 context = new PW3_20152C_TP2_MaratonesEntities3();
 
             ResultadoMaratonParticipante resultadoMaraton = new ResultadoMaratonParticipante();
             Usuario user = GetIdUsuario(context);
+
             int IdUsuario = user.IdUsuario;
 
             int IdMaraton = 0;
             bool id_maraton = Int32.TryParse(row.Cells[1].Text, out IdMaraton);
 
+            //Query consulta cantidad total de inscripciones
             var qc = (from rm in context.ResultadoMaratonParticipante
                       select rm).ToList();
 
             int cantidad = qc.Count();
-            cantidad++;
+            cantidad++; //Incrementa cantidad de inscripciones en 1
         
 
             if (id_maraton)
@@ -89,14 +89,10 @@ namespace TPFinalWeb3
                 context.ResultadoMaratonParticipante.AddObject(resultadoMaraton);
                 context.SaveChanges();
 
-                this.GVMaratones_load();
+            }
 
-            }
-            else
-            {
-                mensaje.InnerText = "error: " + row.Cells[1].Text;
-            }
-            
+            this.GVMaratones_load(); //Recarga GridView
+
         }
 
         private Usuario GetIdUsuario(PW3_20152C_TP2_MaratonesEntities3 context)
