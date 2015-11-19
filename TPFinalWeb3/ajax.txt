@@ -1,0 +1,19 @@
+$.ajax(function(){
+
+method:"post",
+data:{ idUsuario:1 },
+success: function(datos){
+
+
+$.each(datos.d,function(d){
+
+var td= $("td").val($(this).Nombre);
+$("#tabla1").append(td);
+
+);
+})
+	
+}
+
+
+});
