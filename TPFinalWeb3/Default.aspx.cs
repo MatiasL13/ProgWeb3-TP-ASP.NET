@@ -47,7 +47,7 @@ namespace TPFinalWeb3
                                     on mr.IdUsuario equals us.IdUsuario
 
                                     where (mr.IdMaraton == idMaraton) && (mr.PosicionFinal <= 10)
-                                    orderby mr.PosicionFinal descending
+                                    orderby mr.PosicionFinal ascending
 
                                     select new { Nombre = us.Nombre + " " + us.Apellido, Posicion = mr.PosicionFinal }).ToList();
                 GVResultados.DataSource = qp;

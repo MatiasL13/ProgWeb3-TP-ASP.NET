@@ -103,7 +103,7 @@
                     Type="Double"></asp:RangeValidator>
             </div>
             <div class="form-group">
-                                        <asp:Label ID="LabelFechaInicio" runat="server" AssociatedControlID="txtFechaInicio">Fecha y hora de largada:</asp:Label>
+                                        <asp:Label ID="LabelFechaInicio" runat="server" AssociatedControlID="txtFechaInicio">Fecha de largada:</asp:Label>
                                         <asp:TextBox ID="txtFechaInicio" class="form-control datepicker" runat="server"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="RequiredFechaInicio" runat="server" 
                                             ControlToValidate="txtFechaInicio"
@@ -114,6 +114,15 @@
                                             EnableClientScript="true">
                                            
                                         </asp:RequiredFieldValidator>
+            </div>
+            <div class="form-group">
+                <asp:Label ID="lblHora" runat="server" Text="Hora de largada"></asp:Label>
+                <asp:TextBox ID="txtHora" class="form-control " runat="server" ToolTip="00:00:00"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredHora" runat="server" ControlToValidate="txtHora"
+                    CssClass="failureNotification" ErrorMessage="La hora de comienzo es obligatoria."
+                    ValidationGroup="CrearMaratonValidationGroup" EnableClientScript="true">
+                                    *
+                </asp:RequiredFieldValidator>
             </div>
             <div class="submitButton">
                 <asp:Button ID="btnCrearMaraton" runat="server" class="btn btn-success" CommandName="MoveNext"

@@ -27,7 +27,8 @@ namespace TPFinalWeb3
             bool parsePrimerPremio = Int32.TryParse(txtPuesto1.Text, out  primerPremio);
             bool parseSegundoPremio = Int32.TryParse(txtPuesto2.Text, out  segundoPremio);
             bool parseTercerPremio = Int32.TryParse(txtPuesto3.Text, out  tercerPremio);
-            bool dateConvert = DateTime.TryParse(txtFechaInicio.Text, out fecha);
+            bool dateConvert = DateTime.TryParse(txtFechaInicio.Text +" "+ txtHora.Text, out fecha);
+            
 
             if (parseParticipantes || parseLista || parsePrimerPremio || parseSegundoPremio || parseTercerPremio)
             {

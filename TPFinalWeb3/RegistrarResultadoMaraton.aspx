@@ -103,7 +103,7 @@
             </div>
             <div class="submitButton">
                 <asp:Button ID="btnRegistrarResultados" runat="server" class="btn btn-success" CommandName="MoveNext"
-                    Text="Registrar Resultados Datos" ValidationGroup="ResultadosValidationGroup" />
+                    Text="Registrar Resultados Datos" ValidationGroup="ResultadosValidationGroup" OnClick="btnRegistrarResultados_Click" />
             </div>
         </div>
         <div class="separador00">

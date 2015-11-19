@@ -310,6 +310,33 @@ namespace TPFinalWeb3 {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFechaInicio;
         
         /// <summary>
+        /// lblHora control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblHora;
+        
+        /// <summary>
+        /// txtHora control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtHora;
+        
+        /// <summary>
+        /// RequiredHora control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredHora;
+        
+        /// <summary>
         /// btnCrearMaraton control.
         /// </summary>
         /// <remarks>
