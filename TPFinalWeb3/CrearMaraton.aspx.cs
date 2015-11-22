@@ -55,6 +55,7 @@ namespace TPFinalWeb3
             txtPuesto3.Text = null;
             txtFechaHora.Text = null;
 
+            SuccessMessage.Visible = true;
         }
     }
 }

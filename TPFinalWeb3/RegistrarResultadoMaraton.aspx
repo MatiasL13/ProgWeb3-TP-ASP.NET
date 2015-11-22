@@ -6,6 +6,12 @@
     <span class="failureNotification">
         <asp:Literal ID="ErrorMessage" runat="server"></asp:Literal>
     </span>
+    <asp:Panel ID="SuccessMessage" runat="server" Visible="false">
+        <p class="bg-success text-success">
+            <span class="glyphicon glyphicon-ok"></span>
+            Se ha registrado el resultado.
+        </p>
+    </asp:Panel>
     <asp:ValidationSummary ID="RegisterUserValidationSummary" runat="server" CssClass="failureNotification"
         ValidationGroup="ResultadosValidationGroup" />
     <div class='ibox float-e-margins'>

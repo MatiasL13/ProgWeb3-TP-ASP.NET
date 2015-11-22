@@ -58,11 +58,13 @@ namespace TPFinalWeb3
                     txtPosicion.Text = "";
                     txtTiempo.Text = "";
                     ErrorMessage.Text = null;
-                }
+                    SuccessMessage.Visible = true;
+            }
                 catch(Exception ex)
                 {
                     ErrorMessage.Text = "El Participante seleccionado no corresponde con el maraton";
-                }
+                    SuccessMessage.Visible = false;
+            }
 
           
 
