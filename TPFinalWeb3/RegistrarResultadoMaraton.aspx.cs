@@ -12,20 +12,25 @@ namespace TPFinalWeb3
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            PW3_20152C_TP2_MaratonesEntities3 context = new PW3_20152C_TP2_MaratonesEntities3();
+            
+            if (!IsPostBack)
+            {
+                PW3_20152C_TP2_MaratonesEntities3 context = new PW3_20152C_TP2_MaratonesEntities3();
 
-            var qMaraton = context.Maraton;
+                var qMaraton = context.Maraton;
+                DDLMaraton.DataValueField = "IdMaraton";
+                DDLMaraton.DataTextField = "Nombre";
+                DDLMaraton.DataSource = qMaraton;
+                DDLMaraton.DataBind();
 
-            DDLMaraton.DataValueField="IdMaraton";
-            DDLMaraton.DataTextField = "Nombre";
-            DDLMaraton.DataSource = qMaraton;
-            DDLMaraton.DataBind();
+                var part = context.Usuario.Select(u => new { IdUsuario = u.IdUsuario, NombreCompleto = u.Nombre + " " + u.Apellido });
+                DDLParticipante.DataValueField = "IdUsuario";
+                DDLParticipante.DataTextField = "NombreCompleto";
+                DDLParticipante.DataSource = part;
+                DDLParticipante.DataBind();
+            }
 
-            var part = context.Usuario.Select(u => new { IdUsuario = u.IdUsuario, NombreCompleto = u.Nombre + " " + u.Apellido});
-            DDLParticipante.DataValueField = "IdUsuario";
-            DDLParticipante.DataTextField="NombreCompleto";
-            DDLParticipante.DataSource = part;
-            DDLParticipante.DataBind();
+           
 
         }
 
@@ -38,19 +43,28 @@ namespace TPFinalWeb3
             
             bool estado = bool.Parse(DDLCarreraStatus.SelectedValue);
                           
+            try
+                {
+                    ResultadoMaratonParticipante resultadoMaraton = (from rm in context.ResultadoMaratonParticipante
+                                                                     where rm.IdMaraton == id_maraton && rm.IdUsuario == id_usuario
+                                                                     select rm).First();
 
-            ResultadoMaratonParticipante resultadoMaraton = (from rm in context.ResultadoMaratonParticipante
-                                                            where rm.IdMaraton == id_maraton && rm.IdUsuario == id_usuario
-                                                            select rm).First();
+                    resultadoMaraton.PosicionFinal = Int32.Parse(txtPosicion.Text);
+                    resultadoMaraton.TiempoLlegada = Int32.Parse(txtTiempo.Text);
+                    resultadoMaraton.Finalizo = estado;
 
-            resultadoMaraton.PosicionFinal = Int32.Parse(txtPosicion.Text);
-            resultadoMaraton.TiempoLlegada = Int32.Parse(txtTiempo.Text);
-            resultadoMaraton.Finalizo = estado;
+                    context.SaveChanges();
 
-            context.SaveChanges();
+                    txtPosicion.Text = "";
+                    txtTiempo.Text = "";
+                    ErrorMessage.Text = null;
+                }
+                catch(Exception ex)
+                {
+                    ErrorMessage.Text = "El Participante seleccionado no corresponde con el maraton";
+                }
 
-            txtPosicion.Text = "";
-            txtTiempo.Text = "";
+          
 
         }
     }
