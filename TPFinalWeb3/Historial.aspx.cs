@@ -18,28 +18,28 @@ namespace TPFinalWeb3
 
             PW3_20152C_TP2_MaratonesEntities3 context = new PW3_20152C_TP2_MaratonesEntities3();
             Usuario usuario = GetIdUsuario(context);
-            if (usuario != null)
-            {
-                int id_usuario = usuario.IdUsuario;
+            //if (usuario != null)
+            //{
+            //    int id_usuario = usuario.IdUsuario;
 
-                var qh = (from mr in context.ResultadoMaratonParticipante
-                          join m in context.Maraton
-                          on mr.IdMaraton equals m.IdMaraton
+            //    var qh = (from mr in context.ResultadoMaratonParticipante
+            //              join m in context.Maraton
+            //              on mr.IdMaraton equals m.IdMaraton
 
-                          where (mr.IdUsuario == id_usuario) && (mr.PosicionFinal != null)
-                          orderby m.FechaHorarioComienzo descending
+            //              where (mr.IdUsuario == id_usuario) && (mr.PosicionFinal != null)
+            //              orderby m.FechaHorarioComienzo descending
 
-                          select new {
-                              Maraton = m.Nombre,
-                              Posicion = mr.PosicionFinal,
-                              Tiempo = mr.TiempoLlegada,
-                              Premio = mr.PosicionFinal==3 ? m.TercerPremio : (mr.PosicionFinal == 2 ? m.SegundoPremio : (mr.PosicionFinal == 1 ? m.PrimerPremio : 0))
-                          }).ToList();
-                GVHistorial.DataSource = qh;
-                GVHistorial.DataBind();
+            //              select new {
+            //                  Maraton = m.Nombre,
+            //                  Posicion = mr.PosicionFinal,
+            //                  Tiempo = mr.TiempoLlegada,
+            //                  Premio = mr.PosicionFinal==3 ? m.TercerPremio : (mr.PosicionFinal == 2 ? m.SegundoPremio : (mr.PosicionFinal == 1 ? m.PrimerPremio : 0))
+            //              }).ToList();
+            //    GVHistorial.DataSource = qh;
+            //    GVHistorial.DataBind();
 
 
-            }
+            //}
         }
 
         private Usuario GetIdUsuario(PW3_20152C_TP2_MaratonesEntities3 context)

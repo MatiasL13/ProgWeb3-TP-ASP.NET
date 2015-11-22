@@ -85,6 +85,8 @@
     <Content Include="Scripts\datapicker\locales\bootstrap-datepicker.es.js" />
     <Content Include="Scripts\DatosDeUsuario.js" />
     <Content Include="Scripts\datepicker.js" />
+    <Content Include="Scripts\Historial.js" />
+    <Content Include="Scripts\registro.js" />
     <Content Include="Scripts\validaciones.js" />
     <Content Include="servicio.asmx" />
     <Content Include="UserIndex.aspx" />
