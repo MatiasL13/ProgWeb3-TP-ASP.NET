@@ -2,7 +2,8 @@
     CodeBehind="DatosDeUsuario.aspx.cs" Inherits="TPFinalWeb3.Formulario_web13" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="UserMainContent" runat="server">
-    <legend>Modificar Datos Personales</legend><span class="failureNotification">
+    <div class="backTitle"><h1>Administración de datos personales</h1></div>
+    <span class="failureNotification">
         <asp:Literal ID="FailureText" runat="server"></asp:Literal>
     </span>
     <asp:ValidationSummary ID="LoginUserValidationSummary" runat="server" CssClass="failureNotification"
@@ -11,7 +12,7 @@
         <div class="ibox-content">
             <div class="form-group">
                 <asp:Label ID="lblNombre" runat="server" Text="Nombre"></asp:Label>
-                <asp:TextBox ID="txtNombre" class="form-control" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtNombre" class="form-control" runat="server" MaxLength="200"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="txtNombreRequired" runat="server" 
                     ControlToValidate="txtNombre"
                     CssClass="failureNotification" 
@@ -33,7 +34,7 @@
             </div>
             <div class="form-group">
                 <asp:Label ID="lblApellido" runat="server" Text="Apellido"></asp:Label>
-                <asp:TextBox ID="txtApellido" class="form-control" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtApellido" class="form-control" runat="server" MaxLength="200"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="requiredtxtApellido" runat="server" 
                     ControlToValidate="txtApellido"
                     CssClass="failureNotification" 
@@ -95,7 +96,7 @@
                 </asp:CustomValidator>
             </div>
             <div class="submitButton">
-                <asp:Button ID="btnEditarUser" runat="server" class="btn btn-success" CommandName="MoveNext"
+                <asp:Button ID="btnEditarUser" runat="server" class="btn btn-primary" CommandName="MoveNext"
                     Text="Editar Datos" ValidationGroup="UserValidationGroup" 
                     onclick="btnEditarUser_Click" />
             </div>
@@ -103,5 +104,5 @@
     </div>
     <div class="separador00">
     </div>
-    <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/DatosDeUsuario.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/datepicker.js")%>"></script>
 </asp:Content>

@@ -12,11 +12,11 @@
                 ValidationGroup="LoginUserValidationGroup" />
             <div class="accountInfo">
                 <fieldset class="login">
-                    <legend>Información de cuenta</legend>
+                    <div class="backTitle"><h1>Iniciar como administrador</h1></div>
                     <div class='ibox float-e-margins'>
                         <div class="ibox-content box">
                             <div class="form-group">
-                                <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName" Text="Nombre de usuario:"></asp:Label>
+                                <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName" Text="Nombre de usuario:"  MaxLength="200"></asp:Label>
                                 <asp:TextBox ID="UserName" runat="server" CssClass="textEntry form-control"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" 
                                     ControlToValidate="UserName"
@@ -39,7 +39,7 @@
                             </div>
                             <div class="form-group">
                                 <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Contraseña:</asp:Label>
-                                <asp:TextBox ID="Password" runat="server" CssClass="passwordEntry form-control" TextMode="Password"></asp:TextBox>
+                                <asp:TextBox ID="Password" runat="server" CssClass="passwordEntry form-control" TextMode="Password"  MaxLength="50"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" 
                                     ControlToValidate="Password"
                                     CssClass="failureNotification" 
@@ -61,7 +61,7 @@
                          
                             <div class="submitButton">
                                 <asp:Button ID="LoginButton"  runat="server" CommandName="Login" Text="Iniciar sesión"
-                                    class="btn btn-success" ValidationGroup="LoginUserValidationGroup" 
+                                    class="btn btn-primary" ValidationGroup="LoginUserValidationGroup" 
                                     onclick="LoginButton_Click" />
                                     <asp:Label ID="lblIncorrecto" runat="server"  Text=""></asp:Label>
                             </div>

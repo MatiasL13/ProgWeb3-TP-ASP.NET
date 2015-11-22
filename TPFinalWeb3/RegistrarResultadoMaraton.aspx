@@ -2,7 +2,7 @@
     CodeBehind="RegistrarResultadoMaraton.aspx.cs" Inherits="TPFinalWeb3.Formulario_web14" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="AdminMainContent" runat="server">
-    <legend>Registrar resultado de Maratón</legend>
+    <div class="backTitle"><h1>Registrar resultados</h1></div>
     <span class="failureNotification">
         <asp:Literal ID="ErrorMessage" runat="server"></asp:Literal>
     </span>
@@ -98,7 +98,7 @@
                 </asp:DropDownList>
             </div>
             <div class="submitButton">
-                <asp:Button ID="btnRegistrarResultados" runat="server" class="btn btn-success" CommandName="MoveNext"
+                <asp:Button ID="btnRegistrarResultados" runat="server" class="btn btn-primary" CommandName="MoveNext"
                     Text="Registrar Resultados Datos" ValidationGroup="ResultadosValidationGroup" OnClick="btnRegistrarResultados_Click" />
             </div>
         </div>

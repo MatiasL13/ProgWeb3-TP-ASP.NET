@@ -2,7 +2,9 @@
     CodeBehind="CrearMaraton.aspx.cs" Inherits="TPFinalWeb3.Formulario_web15" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="AdminMainContent" runat="server">
-    <legend>Registrar resultado de Maratón</legend><span class="failureNotification">
+    
+    <div class="backTitle"><h1>Crear nueva maratón</h1></div>
+    <span class="failureNotification">
         <asp:Literal ID="ErrorMessage" runat="server"></asp:Literal>
     </span>
     <asp:ValidationSummary ID="RegisterUserValidationSummary" runat="server" CssClass="failureNotification"
@@ -11,7 +13,7 @@
         <div class="ibox-content">
             <div class="form-group">
                 <asp:Label ID="lblNombre" runat="server" Text="Nombre"></asp:Label>
-                <asp:TextBox ID="txtNombre" class="form-control" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtNombre" class="form-control" runat="server" MaxLength="200"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="txtNombre"
                     CssClass="failureNotification" ErrorMessage="El nombre de maraton es obligatorio."
                     ToolTip="El nombre de usuario es obligatorio." ValidationGroup="CrearMaratonValidationGroup">
@@ -27,15 +29,19 @@
                 <asp:Label ID="lblCantParticipantes" runat="server" Text="Cantidad máxima de participantes"></asp:Label>
                 <asp:TextBox ID="txtCantParticipantes" class="form-control" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtCantParticipantes"
-                    CssClass="failureNotification" ErrorMessage="la cantidad de participantes es obligatorio."
+                    CssClass="failureNotification" ErrorMessage="La cantidad de participantes es obligatorio."
                     ValidationGroup="CrearMaratonValidationGroup">
                                     *
                 </asp:RequiredFieldValidator>
                 <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="txtCantParticipantes"
                     CssClass="failureNotification" ClientValidationFunction="campoRequerido" ValidateEmptyText="true"
-                    ValidationGroup="CrearMaratonValidationGroup">
+                     ValidationGroup="CrearMaratonValidationGroup">
                                             *
                 </asp:CustomValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ControlToValidate="txtCantParticipantes" runat="server" 
+                    ErrorMessage="La cantidad de participantes debe ser numerica" ValidationExpression="\d+" ValidationGroup="CrearMaratonValidationGroup">
+                    *
+                </asp:RegularExpressionValidator>
             </div>
             <div class="form-group">
                 <asp:Label ID="lblLugarSalida" runat="server" Text="Lugar de salida"></asp:Label>
@@ -63,6 +69,10 @@
                     ValidationGroup="CrearMaratonValidationGroup">
                                             *
                 </asp:CustomValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" ControlToValidate="txtCantLista" runat="server" 
+                    ErrorMessage="La cantidad de lista de espera debe ser numerica" ValidationExpression="\d+" ValidationGroup="CrearMaratonValidationGroup">
+                    *
+                </asp:RegularExpressionValidator>
             </div>
             <h4>
                 Premios</h4>
@@ -77,6 +87,15 @@
                     ValidationGroup="CrearMaratonValidationGroup">
                                             *
                 </asp:CustomValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator3" ControlToValidate="txtPuesto1" runat="server" 
+                    ErrorMessage="El premio debe ser numerico" ValidationExpression="\d+" ValidationGroup="CrearMaratonValidationGroup">
+                    *
+                </asp:RegularExpressionValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtPuesto1"
+                    CssClass="failureNotification" ErrorMessage="El valor del 1º premio es obligatorio"
+                    ValidationGroup="CrearMaratonValidationGroup">
+                *
+                </asp:RequiredFieldValidator>
             </div>
             <div class="form-group">
                 <asp:Label ID="LabelPuesto2" runat="server" Text="2º"></asp:Label>
@@ -89,6 +108,15 @@
                 <asp:RangeValidator ID="RangeValidator2" runat="server" ErrorMessage="El premio debe ser un monto de dinero entre $500 y $5000"
                     ControlToValidate="txtPuesto2" MaximumValue="5000" MinimumValue="500" ValidationGroup="CrearMaratonValidationGroup"
                     Type="Double"></asp:RangeValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator4" ControlToValidate="txtPuesto2" runat="server" 
+                    ErrorMessage="El premio debe ser numerico" ValidationExpression="\d+" ValidationGroup="CrearMaratonValidationGroup">
+                    *
+                </asp:RegularExpressionValidator>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtPuesto2"
+                    CssClass="failureNotification" ErrorMessage="El valor del 2º premio es obligatorio"
+                    ValidationGroup="CrearMaratonValidationGroup">
+                                    *
+                </asp:RequiredFieldValidator>
             </div>
             <div class="form-group">
                 <asp:Label ID="LabelPuesto3" runat="server" Text="3º"></asp:Label>
@@ -101,31 +129,28 @@
                 <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="El premio debe ser un monto de dinero entre $500 y $5000"
                     ControlToValidate="txtPuesto3" MinimumValue="500" MaximumValue="5000" ValidationGroup="CrearMaratonValidationGroup"
                     Type="Double"></asp:RangeValidator>
+                 <asp:RegularExpressionValidator ID="RegularExpressionValidator5" ControlToValidate="txtPuesto3" runat="server" 
+                    ErrorMessage="El premio debe ser numerico" ValidationExpression="\d+" ValidationGroup="CrearMaratonValidationGroup">
+                    *
+                </asp:RegularExpressionValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtPuesto3"
+                    CssClass="failureNotification" ErrorMessage="El valor del 3º premio es obligatorio"
+                    ValidationGroup="CrearMaratonValidationGroup">
+                                    *
+                </asp:RequiredFieldValidator>
             </div>
+
             <div class="form-group">
-                                        <asp:Label ID="LabelFechaInicio" runat="server" AssociatedControlID="txtFechaInicio">Fecha de largada:</asp:Label>
-                                        <asp:TextBox ID="txtFechaInicio" class="form-control datepicker" runat="server"></asp:TextBox>
-                                        <asp:RequiredFieldValidator ID="RequiredFechaInicio" runat="server" 
-                                            ControlToValidate="txtFechaInicio"
-                                            CssClass="failureNotification" 
-                                            ErrorMessage="La fecha y hora de largada es obligatorio."
-                                            ToolTip="La fecha y hora de largada es obligatorio." 
-                                            ValidationGroup="CrearMaratonValidationGroup"
-                                            EnableClientScript="true">
-                                           
-                                        </asp:RequiredFieldValidator>
-            </div>
-            <div class="form-group">
-                <asp:Label ID="lblHora" runat="server" Text="Hora de largada"></asp:Label>
-                <asp:TextBox ID="txtHora" class="form-control " runat="server" ToolTip="00:00:00"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredHora" runat="server" ControlToValidate="txtHora"
+                <asp:Label ID="lblHora" runat="server" Text="Fecha y Hora de largada"></asp:Label>
+                <asp:TextBox ID="txtFechaHora" class="form-control datetimepicker" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredHora" runat="server" ControlToValidate="txtFechaHora"
                     CssClass="failureNotification" ErrorMessage="La hora de comienzo es obligatoria."
                     ValidationGroup="CrearMaratonValidationGroup" EnableClientScript="true">
                                     *
                 </asp:RequiredFieldValidator>
             </div>
             <div class="submitButton">
-                <asp:Button ID="btnCrearMaraton" runat="server" class="btn btn-success" CommandName="MoveNext"
+                <asp:Button ID="btnCrearMaraton" runat="server" class="btn btn-primary" CommandName="MoveNext"
                     Text="Crear Maraton" ValidationGroup="CrearMaratonValidationGroup" 
                     onclick="btnCrearMaraton_Click" />
             </div>

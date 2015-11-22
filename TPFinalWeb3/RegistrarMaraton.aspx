@@ -2,7 +2,9 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="UserMainContent" runat="server">
 
-    <h2 class="text-center whiteTrans " id="hMaraton" runat="server"></h2>
+     <div class="backTitle">
+        <h1 id="hMaraton" runat="server">Registro de maratones</h1>
+     </div> 
      <asp:gridview id="GVMaratones"        
        autogeneratecolumns="False"
        onselectedindexchanged="CustomersGridView_SelectedIndexChanged"       

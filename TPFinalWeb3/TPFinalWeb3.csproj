@@ -87,8 +87,10 @@
     <Content Include="Scripts\datepicker.js" />
     <Content Include="Scripts\Historial.js" />
     <Content Include="Scripts\registro.js" />
+    <Content Include="Scripts\timepicker.js" />
     <Content Include="Scripts\validaciones.js" />
     <Content Include="servicio.asmx" />
+    <Content Include="Styles\timepicker.css" />
     <Content Include="UserIndex.aspx" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Default.aspx" />

@@ -12,7 +12,7 @@
                                 <div class="ibox-content box boxLogin">
                                     <div class="form-group">
                                         <asp:Label ID="LabelUserName" runat="server" AssociatedControlID="UserName">Nombre :</asp:Label>
-                                        <asp:TextBox ID="UserName" runat="server" CssClass="textEntry form-control"></asp:TextBox>
+                                        <asp:TextBox ID="UserName" runat="server" CssClass="textEntry form-control" MaxLength="200"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="requiredUserName" runat="server" 
                                             ControlToValidate="UserName"
                                             CssClass="failureNotification" 
@@ -33,7 +33,7 @@
                                     </div>
                                     <div class="form-group">
                                         <asp:Label ID="LabelUserLastName" runat="server" AssociatedControlID="txtUserLastName">Apellido :</asp:Label>
-                                        <asp:TextBox ID="txtUserLastName" runat="server" CssClass="textEntry form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtUserLastName" runat="server" CssClass="textEntry form-control" MaxLength="200"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="requiredUserLastName" runat="server" 
                                             ControlToValidate="txtUserLastName"
                                             CssClass="failureNotification" 
@@ -54,7 +54,7 @@
                                     </div>
                                     <div class="form-group">
                                         <asp:Label ID="LabelEmail" runat="server" AssociatedControlID="Email">Correo electr&oacute;nico:</asp:Label>
-                                        <asp:TextBox ID="Email" runat="server" CssClass="textEntry form-control"></asp:TextBox>
+                                        <asp:TextBox ID="Email" runat="server" CssClass="textEntry form-control" MaxLength="200"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="requiredEmail" runat="server" 
                                             ControlToValidate="Email"
                                             CssClass="failureNotification" 
@@ -111,7 +111,7 @@
                                     </div>
                                     <div class="form-group">
                                         <asp:Label ID="LabelLugarRecidencia" runat="server" AssociatedControlID="txtLugarRecidencia">Lugar de Residencia:</asp:Label>
-                                        <asp:TextBox ID="txtLugarRecidencia" runat="server" CssClass="textEntry form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtLugarRecidencia" runat="server" CssClass="textEntry form-control" MaxLength="200"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="requiredLugarRecidencia" runat="server" 
                                             ControlToValidate="txtLugarRecidencia"
                                             CssClass="failureNotification " 
@@ -132,7 +132,7 @@
                                     </div>
                                     <div class="form-group">
                                         <asp:Label ID="LabelPassword" runat="server" AssociatedControlID="Password">Contraseña:</asp:Label>
-                                        <asp:TextBox ID="Password" runat="server" CssClass="passwordEntry form-control" TextMode="Password"></asp:TextBox>
+                                        <asp:TextBox ID="Password" runat="server" CssClass="passwordEntry form-control" TextMode="Password"  MaxLength="50"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="requiredPassword" runat="server" 
                                             ControlToValidate="Password"
                                             CssClass="failureNotification" 
@@ -153,7 +153,7 @@
                                     </div>
                                     <div class="form-group">
                                         <asp:Label ID="LabelConfirmPassword" runat="server" AssociatedControlID="pswConfirmPassword">Confirmar contraseña:</asp:Label>
-                                        <asp:TextBox ID="pswConfirmPassword" runat="server" CssClass="passwordEntry form-control" TextMode="Password"></asp:TextBox>
+                                        <asp:TextBox ID="pswConfirmPassword" runat="server" CssClass="passwordEntry form-control" TextMode="Password"  MaxLength="50"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="requiredConfirmPassword" runat="server" 
                                             ControlToValidate="pswConfirmPassword" 
                                             CssClass="failureNotification"
