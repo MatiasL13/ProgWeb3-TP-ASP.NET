@@ -62,7 +62,7 @@
                 </asp:CustomValidator>
             </div>
             <div class="form-group">
-                <asp:Label ID="Label2" runat="server" Text="Tiempo de llegada"></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text="Tiempo de llegada (En Minutos)"></asp:Label>
                 <asp:TextBox ID="txtTiempo" class="form-control" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
                     ControlToValidate="txtTiempo"
