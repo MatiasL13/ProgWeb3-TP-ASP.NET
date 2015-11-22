@@ -7,7 +7,7 @@
 <h2> Panel de Administrador </h2>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="NavContent" runat="server">
-    <li class=""><a href="/Default.aspx"><i class="fa fa-laptop"></i><span class="nav-label">
+    <li class=""><a href="/AdminIndex.aspx"><i class="fa fa-laptop"></i><span class="nav-label">
         Pagina Principal</span> </a></li>
     <li class=""><a href="/CrearMaraton.aspx"><i class="fa fa-calendar-plus-o"></i><span
         class="nav-label">Creación de maratones</span></a> </li>
