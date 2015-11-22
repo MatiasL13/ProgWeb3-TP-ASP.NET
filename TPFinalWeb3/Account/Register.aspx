@@ -2,7 +2,9 @@
     CodeBehind="Register.aspx.cs" Inherits="TPFinalWeb3.Account.Register" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
-    
+    <link href="<%=ResolveClientUrl("~/Styles/timepicker.css")%>" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/jquery-ui.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Scripts/timepicker.js")%>"></script>
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
 
