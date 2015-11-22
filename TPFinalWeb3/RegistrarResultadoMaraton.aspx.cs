@@ -35,12 +35,9 @@ namespace TPFinalWeb3
 
             int id_maraton = Int32.Parse(DDLMaraton.SelectedValue);
             int id_usuario = Int32.Parse(DDLParticipante.SelectedValue);
-            string estado = DDLCarreraStatus.SelectedValue;
-            bool estadobool = false;
-            if (estado == "true")
-            {
-                estadobool = true;
-            }                
+            
+            bool estado = bool.Parse(DDLCarreraStatus.SelectedValue);
+                          
 
             ResultadoMaratonParticipante resultadoMaraton = (from rm in context.ResultadoMaratonParticipante
                                                             where rm.IdMaraton == id_maraton && rm.IdUsuario == id_usuario
@@ -48,7 +45,7 @@ namespace TPFinalWeb3
 
             resultadoMaraton.PosicionFinal = Int32.Parse(txtPosicion.Text);
             resultadoMaraton.TiempoLlegada = Int32.Parse(txtTiempo.Text);
-            resultadoMaraton.Finalizo = estadobool;
+            resultadoMaraton.Finalizo = estado;
 
             context.SaveChanges();
 

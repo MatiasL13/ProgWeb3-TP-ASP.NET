@@ -16,6 +16,7 @@ namespace TPFinalWeb3
 
         private void GVMaratones_load()
         {
+            int i = 0;
             PW3_20152C_TP2_MaratonesEntities3 context = new PW3_20152C_TP2_MaratonesEntities3();
 
             //Obtengo codigo de usuario
@@ -53,16 +54,28 @@ namespace TPFinalWeb3
                 mensaje = "Cantidad de maratones disponibles: " + query.Count();
                 GVMaratones.DataSource = query;
                 GVMaratones.DataBind();
+             //   Convert.ToInt32(((HiddenField)e.Row.FindControl("hfReversas")).Value);
+            //  GVMaratones
+                foreach (var datos in query)
+                  {
+                    
+                      if (datos.estado == "Inscripto")
+                      {
+                          GVMaratones.Rows[i].Enabled = false;
+                          GVMaratones.Rows[i].Cells[0].Text = "";
+                      }
+                      i++;
+                  }
             }
-
-            hMaraton.InnerText = mensaje;
+            
         }
 
         public void CustomersGridView_SelectedIndexChanged(Object sender, EventArgs e)
         {
            
             GridViewRow row = GVMaratones.SelectedRow;
-
+           // row.FindControl("inscipto").va
+          //  if(row.Row.Cells[iEstado].Text = GetLocalResourceObject("CONCILIADO").ToString();)
             PW3_20152C_TP2_MaratonesEntities3 context = new PW3_20152C_TP2_MaratonesEntities3();
 
             ResultadoMaratonParticipante resultadoMaraton = new ResultadoMaratonParticipante();

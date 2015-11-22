@@ -13,15 +13,11 @@
             <div class="form-group">
                 <asp:Label ID="lblMaraton" runat="server" Text="Selecionar Maraton"></asp:Label>
                 <asp:DropDownList ID="DDLMaraton" runat="server">
-                    <asp:ListItem>Maraton 1</asp:ListItem>
-                    <asp:ListItem>Maraton 2</asp:ListItem>
                 </asp:DropDownList>
             </div>
             <div class="form-group">
                 <asp:Label ID="lblParticipante" runat="server" Text="Selecionar Participante"></asp:Label>
                 <asp:DropDownList ID="DDLParticipante" runat="server">
-                    <asp:ListItem>Participante 1</asp:ListItem>
-                    <asp:ListItem>Participante 2</asp:ListItem>
                 </asp:DropDownList>
             </div>
             <div class="form-group">

@@ -3,16 +3,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="UserMainContent" runat="server">
 
     <h2 class="text-center whiteTrans " id="hMaraton" runat="server"></h2>
-     <asp:gridview id="GVMaratones" 
-       
+     <asp:gridview id="GVMaratones"        
        autogeneratecolumns="False"
-       autogenerateselectbutton="True"
-       selectedindex="1"
-       onselectedindexchanged="CustomersGridView_SelectedIndexChanged"
-       
+       onselectedindexchanged="CustomersGridView_SelectedIndexChanged"       
        runat="server" DataKeyNames="IdMaraton" CssClass="table table-hover">
         <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
                     <Columns>
+                      <asp:CommandField HeaderText="Seleccionar" SelectText="Seleccionar" ShowSelectButton="True"
+                                                                    meta:resourcekey="CommandFieldResource3">
+                                                                    <HeaderStyle Width="50px" />
+                                                                    <ItemStyle Width="50px" />
+                       </asp:CommandField>
                         <asp:BoundField DataField="IdMaraton" HeaderText="Nro Maraton"/>
                         <asp:BoundField DataField="Nombre" HeaderText="Maratón"  />
                         <asp:BoundField DataField="LugarSalida" HeaderText="Lugar"  />
