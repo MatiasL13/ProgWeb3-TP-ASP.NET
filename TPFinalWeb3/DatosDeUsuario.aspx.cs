@@ -23,12 +23,12 @@ namespace TPFinalWeb3
                         txtApellido.Text = usuario.Apellido;
                         txtResidencia.Text = usuario.LugarResidencia;
                         txtFechaNacimiento.Text = usuario.FechaNac.ToString();
-
+                        
                     }
                 }
                 catch (Exception ex)
                 {
-
+                    
                 }
 
             }
@@ -51,11 +51,12 @@ namespace TPFinalWeb3
                     usuario.FechaNac = fecha;
 
                     context.SaveChanges();
+                    SuccessMessage.Visible = true;
                 }
             }
             catch (Exception ex)
             {
-
+                SuccessMessage.Visible = false;
             }
 
         }

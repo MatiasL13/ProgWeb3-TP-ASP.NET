@@ -6,13 +6,19 @@
     <span class="failureNotification">
         <asp:Literal ID="FailureText" runat="server"></asp:Literal>
     </span>
+    <asp:Panel ID="SuccessMessage" runat="server" Visible="false">
+        <p class="bg-success text-success">
+            <span class="glyphicon glyphicon-ok"></span>
+            Se han modificado los datos.
+        </p>
+    </asp:Panel>
     <asp:ValidationSummary ID="LoginUserValidationSummary" runat="server" CssClass="failureNotification"
         ValidationGroup="UserValidationGroup" />
     <div class='ibox float-e-margins'>
         <div class="ibox-content">
             <div class="form-group">
                 <asp:Label ID="lblNombre" runat="server" Text="Nombre"></asp:Label>
-                <asp:TextBox ID="txtNombre" class="form-control" runat="server" MaxLength="200"></asp:TextBox>
+                <asp:TextBox ID="txtNombre" class="form-control" runat="server" MaxLength="30"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="txtNombreRequired" runat="server" 
                     ControlToValidate="txtNombre"
                     CssClass="failureNotification" 
@@ -34,7 +40,7 @@
             </div>
             <div class="form-group">
                 <asp:Label ID="lblApellido" runat="server" Text="Apellido"></asp:Label>
-                <asp:TextBox ID="txtApellido" class="form-control" runat="server" MaxLength="200"></asp:TextBox>
+                <asp:TextBox ID="txtApellido" class="form-control" runat="server" MaxLength="30"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="requiredtxtApellido" runat="server" 
                     ControlToValidate="txtApellido"
                     CssClass="failureNotification" 
@@ -76,7 +82,7 @@
             </div>
             <div class="form-group">
                 <asp:Label ID="lblResidencia" runat="server" Text="Residencia"></asp:Label>
-                <asp:TextBox ID="txtResidencia" class="form-control" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtResidencia" class="form-control" runat="server" MaxLength="200"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="requiredLugarRecidencia" runat="server" 
                     ControlToValidate="txtResidencia"
                     CssClass="failureNotification " 

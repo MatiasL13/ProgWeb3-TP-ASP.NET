@@ -22,6 +22,15 @@ namespace TPFinalWeb3 {
         protected global::System.Web.UI.WebControls.Literal FailureText;
         
         /// <summary>
+        /// SuccessMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel SuccessMessage;
+        
+        /// <summary>
         /// LoginUserValidationSummary control.
         /// </summary>
         /// <remarks>
