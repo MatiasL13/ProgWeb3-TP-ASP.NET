@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
 using System.Security.Cryptography;
+using System.Text;
 
 namespace TPFinalWeb3.Account
 {
@@ -26,19 +27,16 @@ namespace TPFinalWeb3.Account
 
             bool dateConvert = DateTime.TryParse(txtFechaNac.Text, out fecha);
 
-
+            string encriptado = getMd5Hash(Password.Text);
             usuario.Nombre = UserName.Text;
             usuario.Apellido = txtUserLastName.Text;
             usuario.LugarResidencia = txtLugarRecidencia.Text;
             usuario.Email = Email.Text;
             usuario.FechaNac = fecha;
-            usuario.Contrasenia = Password.Text;
-            MD5 md5Hash = MD5.Create();
+            usuario.Contrasenia = encriptado;
+           
 
-            string pass = GetMd5Hash(md5Hash, Password.Text);
 
-            string encryptedstring = StringCipher.Encrypt(plaintext, password);
-            string decryptedstring = StringCipher.Decrypt(encryptedstring, password);
 
 
 
@@ -61,6 +59,46 @@ namespace TPFinalWeb3.Account
             Response.Cookies.Add(cookie);
             Response.Redirect("/default.aspx");
         }
+        static bool verifyMd5Hash(string input, string hash)
+        {
+            // Hash the input.
+            string hashOfInput = getMd5Hash(input);
+
+            // Create a StringComparer an compare the hashes.
+            StringComparer comparer = StringComparer.OrdinalIgnoreCase;
+
+            if (0 == comparer.Compare(hashOfInput, hash))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        static string getMd5Hash(string input)
+        {
+            // Create a new instance of the MD5CryptoServiceProvider object.
+            MD5CryptoServiceProvider md5Hasher = new MD5CryptoServiceProvider();
+
+            // Convert the input string to a byte array and compute the hash.
+            byte[] data = md5Hasher.ComputeHash(Encoding.Default.GetBytes(input));
+
+            // Create a new Stringbuilder to collect the bytes
+            // and create a string.
+            StringBuilder sBuilder = new StringBuilder();
+
+            // Loop through each byte of the hashed data 
+            // and format each one as a hexadecimal string.
+            for (int i = 0; i < data.Length; i++)
+            {
+                sBuilder.Append(data[i].ToString("x2"));
+            }
+
+            // Return the hexadecimal string.
+            return sBuilder.ToString();
+        }
+
     }
 
 }
