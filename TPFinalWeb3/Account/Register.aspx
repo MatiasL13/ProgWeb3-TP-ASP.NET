@@ -14,7 +14,7 @@
                                 <div class="ibox-content box boxLogin">
                                     <div class="form-group">
                                         <asp:Label ID="LabelUserName" runat="server" AssociatedControlID="UserName">Nombre :</asp:Label>
-                                        <asp:TextBox ID="UserName" runat="server" CssClass="textEntry form-control" MaxLength="200"></asp:TextBox>
+                                        <asp:TextBox ID="UserName" runat="server" CssClass="textEntry form-control" MaxLength="30"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="requiredUserName" runat="server" 
                                             ControlToValidate="UserName"
                                             CssClass="failureNotification" 
@@ -35,7 +35,7 @@
                                     </div>
                                     <div class="form-group">
                                         <asp:Label ID="LabelUserLastName" runat="server" AssociatedControlID="txtUserLastName">Apellido :</asp:Label>
-                                        <asp:TextBox ID="txtUserLastName" runat="server" CssClass="textEntry form-control" MaxLength="200"></asp:TextBox>
+                                        <asp:TextBox ID="txtUserLastName" runat="server" CssClass="textEntry form-control" MaxLength="30"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="requiredUserLastName" runat="server" 
                                             ControlToValidate="txtUserLastName"
                                             CssClass="failureNotification" 
@@ -113,7 +113,7 @@
                                     </div>
                                     <div class="form-group">
                                         <asp:Label ID="LabelLugarRecidencia" runat="server" AssociatedControlID="txtLugarRecidencia">Lugar de Residencia:</asp:Label>
-                                        <asp:TextBox ID="txtLugarRecidencia" runat="server" CssClass="textEntry form-control" MaxLength="200"></asp:TextBox>
+                                        <asp:TextBox ID="txtLugarRecidencia" runat="server" CssClass="textEntry form-control" MaxLength="100"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="requiredLugarRecidencia" runat="server" 
                                             ControlToValidate="txtLugarRecidencia"
                                             CssClass="failureNotification " 

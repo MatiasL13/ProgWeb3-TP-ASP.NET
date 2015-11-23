@@ -13,7 +13,7 @@
                         <div class="ibox-content box boxLogin">
                             <div class="form-group">
                                 <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName" Text="Nombre de usuario:"></asp:Label>
-                                <asp:TextBox ID="UserName" runat="server" CssClass="textEntry form-control" MaxLength="200"></asp:TextBox>
+                                <asp:TextBox ID="UserName" runat="server" CssClass="textEntry form-control" MaxLength="30"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" 
                                     ControlToValidate="UserName"
                                     CssClass="failureNotification" 
