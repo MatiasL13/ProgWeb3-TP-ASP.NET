@@ -45,20 +45,33 @@ namespace TPFinalWeb3
                           
             try
                 {
-                    ResultadoMaratonParticipante resultadoMaraton = (from rm in context.ResultadoMaratonParticipante
-                                                                     where rm.IdMaraton == id_maraton && rm.IdUsuario == id_usuario
-                                                                     select rm).First();
+                    int posicion = Int32.Parse(txtPosicion.Text);
+                    var consultaPosicion = (from rm in context.ResultadoMaratonParticipante
+                                                                     where rm.IdMaraton == id_maraton && rm.PosicionFinal == posicion
+                                                                     select rm).ToList();
 
-                    resultadoMaraton.PosicionFinal = Int32.Parse(txtPosicion.Text);
-                    resultadoMaraton.TiempoLlegada = Int32.Parse(txtTiempo.Text);
-                    resultadoMaraton.Finalizo = estado;
+                    if (consultaPosicion.Count()==0)
+                    {
+                        ResultadoMaratonParticipante resultadoMaraton = (from rm in context.ResultadoMaratonParticipante
+                                                                         where rm.IdMaraton == id_maraton && rm.IdUsuario == id_usuario
+                                                                         select rm).First();
 
-                    context.SaveChanges();
+                        resultadoMaraton.PosicionFinal = posicion;
+                        resultadoMaraton.TiempoLlegada = Int32.Parse(txtTiempo.Text);
+                        resultadoMaraton.Finalizo = estado;
 
-                    txtPosicion.Text = "";
-                    txtTiempo.Text = "";
-                    ErrorMessage.Text = null;
-                    SuccessMessage.Visible = true;
+                        context.SaveChanges();
+
+                        txtPosicion.Text = "";
+                        txtTiempo.Text = "";
+                        ErrorMessage.Text = null;
+                        SuccessMessage.Visible = true;
+                }
+                else
+                {
+                    ErrorMessage.Text = "La posición ya fue ingresada para otro participante";
+                }
+                    
             }
                 catch(Exception ex)
                 {
@@ -66,7 +79,8 @@ namespace TPFinalWeb3
                     SuccessMessage.Visible = false;
             }
 
-          
+
+
 
         }
     }
