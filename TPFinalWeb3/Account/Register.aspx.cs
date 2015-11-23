@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
+using System.Security.Cryptography;
 
 namespace TPFinalWeb3.Account
 {
@@ -31,6 +33,14 @@ namespace TPFinalWeb3.Account
             usuario.Email = Email.Text;
             usuario.FechaNac = fecha;
             usuario.Contrasenia = Password.Text;
+            MD5 md5Hash = MD5.Create();
+
+            string pass = GetMd5Hash(md5Hash, Password.Text);
+
+            string encryptedstring = StringCipher.Encrypt(plaintext, password);
+            string decryptedstring = StringCipher.Decrypt(encryptedstring, password);
+
+
 
             //context.AddTousuarios(usuario);
             context.Usuario.AddObject(usuario);
