@@ -11,7 +11,7 @@
             var response = data.d;
             var trHTML = '';
             $.each(response, function (i, item) {
-                trHTML += '<tr><td>' + item.NombreMaraton + '</td>' +
+                trHTML += '<tr><td>' + item.Maraton + '</td>' +
                  '<td>' + item.Posicion + '</td>' +
                  '<td>' + item.Tiempo + '</td>' +
                   '<td>' + item.Premio + '</td>' + 

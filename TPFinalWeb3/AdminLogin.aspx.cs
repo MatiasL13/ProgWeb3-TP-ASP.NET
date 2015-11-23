@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Security;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace TPFinalWeb3
 {
@@ -22,7 +24,8 @@ namespace TPFinalWeb3
             PW3_20152C_TP2_MaratonesEntities3 context = new PW3_20152C_TP2_MaratonesEntities3();
             try
             {
-                Usuario usuario = context.Usuario.Where(r => r.Nombre == UserName.Text && r.Contrasenia == Password.Text && r.Admin == true).First();
+                string encriptado = getMd5Hash(Password.Text);
+                Usuario usuario = context.Usuario.Where(r => r.Nombre == UserName.Text && r.Contrasenia == encriptado && r.Admin == true).First();
                 if (usuario != null)
                 {
                     string roles = "Admin,Member";
@@ -50,6 +53,28 @@ namespace TPFinalWeb3
             {
                 lblIncorrecto.Text = "Contraseña o Usuario Incorrecto ";
             }
+        }
+        static string getMd5Hash(string input)
+        {
+            // Create a new instance of the MD5CryptoServiceProvider object.
+            MD5CryptoServiceProvider md5Hasher = new MD5CryptoServiceProvider();
+
+            // Convert the input string to a byte array and compute the hash.
+            byte[] data = md5Hasher.ComputeHash(Encoding.Default.GetBytes(input));
+
+            // Create a new Stringbuilder to collect the bytes
+            // and create a string.
+            StringBuilder sBuilder = new StringBuilder();
+
+            // Loop through each byte of the hashed data 
+            // and format each one as a hexadecimal string.
+            for (int i = 0; i < data.Length; i++)
+            {
+                sBuilder.Append(data[i].ToString("x2"));
+            }
+
+            // Return the hexadecimal string.
+            return sBuilder.ToString();
         }
     }
 }
