@@ -12,12 +12,13 @@ namespace TPFinalWeb3
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            
+
             if (!IsPostBack)
             {
                 PW3_20152C_TP2_MaratonesEntities3 context = new PW3_20152C_TP2_MaratonesEntities3();
 
-                var qMaraton = context.Maraton;
+                var qMaraton = (from m in context.Maraton  where m.FechaHorarioComienzo < DateTime.Now
+                                    select m);
                 DDLMaraton.DataValueField = "IdMaraton";
                 DDLMaraton.DataTextField = "Nombre";
                 DDLMaraton.DataSource = qMaraton;
@@ -30,14 +31,14 @@ namespace TPFinalWeb3
                 DDLParticipante.DataBind();
             }
 
-           
+
 
         }
 
         protected void btnRegistrarResultados_Click(object sender, EventArgs e)
         {
             PW3_20152C_TP2_MaratonesEntities3 context = new PW3_20152C_TP2_MaratonesEntities3();
-
+            int numeroDeInscripcion = 0;
             int id_maraton = Int32.Parse(DDLMaraton.SelectedValue);
             int id_usuario = Int32.Parse(DDLParticipante.SelectedValue);
             
@@ -49,6 +50,9 @@ namespace TPFinalWeb3
                     var consultaPosicion = (from rm in context.ResultadoMaratonParticipante
                                                                      where rm.IdMaraton == id_maraton && rm.PosicionFinal == posicion
                                                                      select rm).ToList();
+               
+
+
 
                     if (consultaPosicion.Count()==0)
                     {
@@ -56,20 +60,32 @@ namespace TPFinalWeb3
                                                                          where rm.IdMaraton == id_maraton && rm.IdUsuario == id_usuario
                                                                          select rm).First();
 
-                        resultadoMaraton.PosicionFinal = posicion;
-                        resultadoMaraton.TiempoLlegada = Int32.Parse(txtTiempo.Text);
-                        resultadoMaraton.Finalizo = estado;
+                        Maraton maraton = (from m in context.Maraton where m.IdMaraton == id_maraton select m).First();
 
-                        context.SaveChanges();
+                        if (resultadoMaraton.NroInscripcion <= maraton.MaxParticipantes)
+                        {
+                            resultadoMaraton.PosicionFinal = posicion;
+                            resultadoMaraton.TiempoLlegada = Int32.Parse(txtTiempo.Text);
+                            resultadoMaraton.Finalizo = estado;
 
-                        txtPosicion.Text = "";
-                        txtTiempo.Text = "";
-                        ErrorMessage.Text = null;
-                        SuccessMessage.Visible = true;
+                            context.SaveChanges();
+
+                            txtPosicion.Text = "";
+                            txtTiempo.Text = "";
+                            ErrorMessage.Text = null;
+                            SuccessMessage.Visible = true;
+                        }
+                        else
+                        {
+
+                            ErrorMessage.Text = "El participante se encuentra en lista de espera";
+                            SuccessMessage.Visible = false;
+                        }
                 }
                 else
                 {
                     ErrorMessage.Text = "La posición ya fue ingresada para otro participante";
+                    SuccessMessage.Visible = false;
                 }
                     
             }
@@ -81,6 +97,11 @@ namespace TPFinalWeb3
 
 
 
+
+        }
+
+        protected void datosMaraton()
+        {
 
         }
     }

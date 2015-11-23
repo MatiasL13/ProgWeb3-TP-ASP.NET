@@ -82,7 +82,7 @@
             </div>
             <div class="form-group">
                 <asp:Label ID="lblResidencia" runat="server" Text="Residencia"></asp:Label>
-                <asp:TextBox ID="txtResidencia" class="form-control" runat="server" MaxLength="200"></asp:TextBox>
+                <asp:TextBox ID="txtResidencia" class="form-control" runat="server" MaxLength="50"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="requiredLugarRecidencia" runat="server" 
                     ControlToValidate="txtResidencia"
                     CssClass="failureNotification " 

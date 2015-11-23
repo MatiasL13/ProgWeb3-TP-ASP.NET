@@ -19,7 +19,7 @@
         <div class="ibox-content">
             <div class="form-group">
                 <asp:Label ID="lblNombre" runat="server" Text="Nombre"></asp:Label>
-                <asp:TextBox ID="txtNombre" class="form-control" runat="server" MaxLength="200"></asp:TextBox>
+                <asp:TextBox ID="txtNombre" class="form-control" runat="server" MaxLength="50"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="txtNombre"
                     CssClass="failureNotification" ErrorMessage="El nombre de maraton es obligatorio."
                     ToolTip="El nombre de usuario es obligatorio." ValidationGroup="CrearMaratonValidationGroup">
@@ -50,8 +50,8 @@
                 </asp:RegularExpressionValidator>
             </div>
             <div class="form-group">
-                <asp:Label ID="lblLugarSalida" runat="server" Text="Lugar de salida"></asp:Label>
-                <asp:TextBox ID="txtLugarSalida" class="form-control " runat="server"></asp:TextBox>
+                <asp:Label ID="lblLugarSalida" runat="server" Text="Lugar de salida" ></asp:Label>
+                <asp:TextBox ID="txtLugarSalida" class="form-control " runat="server"  MaxLength="50" ></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtLugarSalida"
                     CssClass="failureNotification" ErrorMessage="El lugar es obligatorio." ValidationGroup="CrearMaratonValidationGroup">
                                     *

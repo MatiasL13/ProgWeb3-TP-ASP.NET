@@ -113,7 +113,7 @@
                                     </div>
                                     <div class="form-group">
                                         <asp:Label ID="LabelLugarRecidencia" runat="server" AssociatedControlID="txtLugarRecidencia">Lugar de Residencia:</asp:Label>
-                                        <asp:TextBox ID="txtLugarRecidencia" runat="server" CssClass="textEntry form-control" MaxLength="100"></asp:TextBox>
+                                        <asp:TextBox ID="txtLugarRecidencia" runat="server" CssClass="textEntry form-control" MaxLength="50"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="requiredLugarRecidencia" runat="server" 
                                             ControlToValidate="txtLugarRecidencia"
                                             CssClass="failureNotification " 

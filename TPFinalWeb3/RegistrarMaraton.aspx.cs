@@ -27,10 +27,10 @@ namespace TPFinalWeb3
             //Query Maratones disponibles para inscripcion. Verifica fecha de inscripcion, solo muestra en caso de haber disponibilidad y ademas verifica si el que el usuario logueado no este previamente inscripto
             var query = from m in context.Maraton
                         where m.FechaHorarioComienzo >= DateTime.Now
-                          && (m.MaxParticipantes + m.ParticipantesEnEspera) >
-                                                                            (from rm in context.ResultadoMaratonParticipante
-                                                                             where rm.IdMaraton == m.IdMaraton
-                                                                             select rm).Count()
+                          //&& (m.MaxParticipantes + m.ParticipantesEnEspera) >
+                          //                                                  (from rm in context.ResultadoMaratonParticipante
+                          //                                                   where rm.IdMaraton == m.IdMaraton
+                          //                                                   select rm).Count()
                         //&& !(from rm in context.ResultadoMaratonParticipante
                         //     where rm.IdUsuario == IdUsuario
                         //     select rm.IdMaraton).Contains(m.IdMaraton)
@@ -44,9 +44,14 @@ namespace TPFinalWeb3
                             estado = (from rm in context.ResultadoMaratonParticipante
                                       where rm.IdMaraton == m.IdMaraton
                                       select rm.IdUsuario).Contains(IdUsuario) ? "Inscripto" :
-                                      (((from rm in context.ResultadoMaratonParticipante
+                                      (
+                                        (m.MaxParticipantes + m.ParticipantesEnEspera) <=
+                                                                            (from rm in context.ResultadoMaratonParticipante
+                                                                             where rm.IdMaraton == m.IdMaraton
+                                                                             select rm).Count() ? "Lleno" :
+                                       ((from rm in context.ResultadoMaratonParticipante
                                        where rm.IdMaraton == m.IdMaraton
-                                       select rm).Count()) >= m.MaxParticipantes ? "En Espera" :  "Disponible")
+                                       select rm).Count()) >= m.MaxParticipantes ? "En Espera" : "Disponible")
                         };
             String mensaje = "No existen maratones disponibles por el momento";
             if (query.Count() > 0)
@@ -59,7 +64,7 @@ namespace TPFinalWeb3
                 foreach (var datos in query)
                   {
                     
-                      if (datos.estado == "Inscripto")
+                      if (datos.estado == "Inscripto" || datos.estado == "Lleno")
                       {
                           GVMaratones.Rows[i].Enabled = false;
                           GVMaratones.Rows[i].Cells[0].Text = "";
@@ -87,8 +92,13 @@ namespace TPFinalWeb3
             bool id_maraton = Int32.TryParse(row.Cells[1].Text, out IdMaraton);
 
             //Query consulta cantidad total de inscripciones
+      
+
             var qc = (from rm in context.ResultadoMaratonParticipante
-                      select rm).ToList();
+                      where IdMaraton == rm.IdMaraton
+                       group rm by rm.IdMaraton into m
+                      select m).ToList()
+                      ;
 
             int cantidad = qc.Count();
             cantidad++; //Incrementa cantidad de inscripciones en 1
