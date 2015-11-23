@@ -21,7 +21,7 @@ namespace TPFinalWeb3
         {
 
         }
-        [WebMethod]
+        [WebMethod(EnableSession = true)]
         public List<ResultadoMaratonUsuario> ObtenerMaratonesRealizados()
         {
             var dataContext = new PW3_20152C_TP2_MaratonesEntities3();
