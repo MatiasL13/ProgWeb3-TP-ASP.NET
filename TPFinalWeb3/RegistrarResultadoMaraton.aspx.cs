@@ -38,7 +38,6 @@ namespace TPFinalWeb3
         protected void btnRegistrarResultados_Click(object sender, EventArgs e)
         {
             PW3_20152C_TP2_MaratonesEntities3 context = new PW3_20152C_TP2_MaratonesEntities3();
-            int numeroDeInscripcion = 0;
             int id_maraton = Int32.Parse(DDLMaraton.SelectedValue);
             int id_usuario = Int32.Parse(DDLParticipante.SelectedValue);
             

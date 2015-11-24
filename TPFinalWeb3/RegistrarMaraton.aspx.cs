@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Drawing;
 
 namespace TPFinalWeb3
 {
@@ -41,6 +42,7 @@ namespace TPFinalWeb3
                             m.Nombre,
                             m.LugarSalida,
                             m.FechaHorarioComienzo,
+                            m.MaxParticipantes,
                             estado = (from rm in context.ResultadoMaratonParticipante
                                       where rm.IdMaraton == m.IdMaraton
                                       select rm.IdUsuario).Contains(IdUsuario) ? "Inscripto" :
@@ -66,6 +68,18 @@ namespace TPFinalWeb3
                     
                       if (datos.estado == "Inscripto" || datos.estado == "Lleno")
                       {
+                              if(datos.estado == "Inscripto" )
+                              {
+                                   ResultadoMaratonParticipante resultadoMaraton = (from rm in context.ResultadoMaratonParticipante
+                                                                         where rm.IdMaraton == datos.IdMaraton && rm.IdUsuario == IdUsuario
+                                                                         select rm).First();
+                                   if (datos.MaxParticipantes < resultadoMaraton.NroInscripcion)
+                                   {
+                                       GVMaratones.Rows[i].BackColor = Color.Orange;
+                                       GVMaratones.Rows[i].Cells[5].Text = "Inscripto en Espera";
+                                   }
+                              }
+                                  
                           GVMaratones.Rows[i].Enabled = false;
                           GVMaratones.Rows[i].Cells[0].Text = "";
                       }
