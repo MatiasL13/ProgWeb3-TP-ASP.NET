@@ -97,10 +97,10 @@ namespace TPFinalWeb3
             var qc = (from rm in context.ResultadoMaratonParticipante
                       where IdMaraton == rm.IdMaraton
                        group rm by rm.IdMaraton into m
-                      select m).ToList()
+                      select m.Count()).First()
                       ;
 
-            int cantidad = qc.Count();
+            int cantidad = qc;
             cantidad++; //Incrementa cantidad de inscripciones en 1
         
 
