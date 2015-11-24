@@ -91,7 +91,7 @@ namespace TPFinalWeb3
 
         public void CustomersGridView_SelectedIndexChanged(Object sender, EventArgs e)
         {
-           
+           int cantidad = 0;
             GridViewRow row = GVMaratones.SelectedRow;
            // row.FindControl("inscipto").va
           //  if(row.Row.Cells[iEstado].Text = GetLocalResourceObject("CONCILIADO").ToString();)
@@ -106,16 +106,21 @@ namespace TPFinalWeb3
             bool id_maraton = Int32.TryParse(row.Cells[1].Text, out IdMaraton);
 
             //Query consulta cantidad total de inscripciones
-      
 
-            var qc = (from rm in context.ResultadoMaratonParticipante
-                      where IdMaraton == rm.IdMaraton
-                       group rm by rm.IdMaraton into m
-                      select m.Count()).First()
+            try
+            {
+                var qc = (from rm in context.ResultadoMaratonParticipante
+                          where IdMaraton == rm.IdMaraton
+                          group rm by rm.IdMaraton into m
+                          select m.Count()).First()
                       ;
 
-            int cantidad = qc;
+                 cantidad = qc;
+               
+            }
+            catch( Exception ex){}
             cantidad++; //Incrementa cantidad de inscripciones en 1
+            
         
 
             if (id_maraton)
